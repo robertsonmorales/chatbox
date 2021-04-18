@@ -10,38 +10,39 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container-fluid vh-100 p-0" id="app">
-        <div class="row vh-100 m-3">
+    <div class="container-fluid p-0" id="app">
+        <div class="row no-gutters">
             <div class="col-3">
-                <div class="chats p-3">
-                    <div class="text-header mb-3">
-                        <h4 class="font-weight-bold">Chats</h4>
-                        <span><i data-feather="more-horizontal"></i></span>
-                    </div>
+                <div class="chats vh-100">
 
-                    <div class="create-new mb-4">
+                    <div class="create-new p-3">
                         <button class="btn-create-new p-2"
                         type="button">
-                            <div class="add-icon p-3 mr-2">
+                            <div class="add-icon p-2 mr-3">
                                 <i data-feather="plus"></i>
                             </div>
                             <div class="add-text">Create New</div>
                         </button>
                     </div>
 
-                    <div class="search-name mb-4 px-2">
+                    <div class="text-header p-3">
+                        <h4 class="font-weight-bold">Chats</h4>
+                        <span><i data-feather="more-horizontal"></i></span>
+                    </div>
+
+                    <div class="search-name mx-3 mb-3 px-2">
                         <input type="text" 
                         name="search-name" 
                         id="search-name"
                         class="search-input w-100"
-                        placeholder="Search name...">
+                        placeholder="Search here...">
 
                         <span class="pr-2"><i data-feather="search"></i></span>
                     </div>
 
                     <div class="chat-content">
                         <button type="button"
-                        class="conversations btn-convo p-2 mb-1">
+                        class="conversations btn-convo py-2 px-3 mb-1">
                             <div class="image-wrapper mr-2">
                                 <img src="src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg"
                                 alt="Aiony Haust"
@@ -54,7 +55,7 @@
                             </div>
                         </button>
                         <button type="button"
-                        class="conversations btn-convo p-2 mb-1">
+                        class="conversations btn-convo py-2 px-3 mb-1">
                             <div class="image-wrapper mr-2">
                                 <img src="src/images/austin-wade-X6Uj51n5CE8-unsplash.jpg"
                                 alt="Austin Wade"
@@ -67,7 +68,7 @@
                             </div>
                         </button>
                         <button type="button"
-                        class="conversations btn-convo p-2 mb-1">
+                        class="conversations btn-convo py-2 px-3 mb-1">
                             <div class="image-wrapper mr-2">
                                 <img src="src/images/houcine-ncib-B4TjXnI0Y2c-unsplash.jpg"
                                 alt="Houcine Ncib"
@@ -80,7 +81,7 @@
                             </div>
                         </button>
                         <button type="button"
-                        class="conversations btn-convo p-2 mb-1">
+                        class="conversations btn-convo py-2 px-3 mb-1">
                             <div class="image-wrapper mr-2">
                                 <img src="src/images/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg"
                                 alt="Joseph Gonzalez"
@@ -93,7 +94,7 @@
                             </div>
                         </button>
                         <button type="button"
-                        class="conversations btn-convo p-2 mb-1">
+                        class="conversations btn-convo py-2 px-3 mb-1">
                             <div class="image-wrapper mr-2">
                                 <img src="src/images/jurica-koletic-7YVZYZeITc8-unsplash.jpg"
                                 alt="Jurica Koletic"
@@ -106,7 +107,7 @@
                             </div>
                         </button>
                         <button type="button"
-                        class="conversations btn-convo p-2 mb-1">
+                        class="conversations btn-convo py-2 px-3 mb-1">
                             <div class="image-wrapper mr-2">
                                 <img src="src/images/michael-dam-mEZ3PoFGs_k-unsplash.jpg"
                                 alt="Richeale Dam"
@@ -118,12 +119,26 @@
                                 <span class="persons-text text-muted text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!</span>
                             </div>
                         </button>
+                        <button type="button"
+                        class="conversations btn-convo py-2 px-3 mb-1">
+                            <div class="image-wrapper mr-2">
+                                <img src="src/images/prince-akachi-J1OScm_uHUQ-unsplash.jpg"
+                                alt="Princess Akachi"
+                                class="img-fluid-cover">
+                                <span class="person-status"></span>
+                            </div>
+                            <div class="persons-chat">
+                                <span class="persons-name">Princess Akachi</span>
+                                <span class="persons-text text-muted text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!</span>
+                            </div>
+                        </button>
                     </div>
+                    <br>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="inbox">
-                    <div class="inbox-header">
+            <div class="col-5">
+                <div class="inbox m-3">
+                    <div class="inbox-header mb-5">
                         <div class="image-wrapper mr-2">
                             <img src="src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg"
                             alt="Aiony Haust"
@@ -133,10 +148,89 @@
                         <div class="persons-chat">
                             <span class="persons-name h5 mb-0">Aiony Haust</span>
                         </div>
+
+                        <div class="more-options">
+                            <button class="btn-phone" title="Start a voice call">
+                                <i data-feather="phone"></i>
+                            </button>
+                            <button class="btn-video ml-3" title="Start a video call">
+                                <i data-feather="video"></i>
+                            </button>
+                            <button class="btn-information ml-3">
+                                <i data-feather="info"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="inbox-content">
+
+                        <div class="text text-left">
+                            <div class="image-wrapper mr-2">
+                                <img src="src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg"
+                                alt="Aiony Haust"
+                                class="img-fluid-cover img-fluid-cover-child">
+                            </div>
+                            <div class="text-wrapper">
+                                <span class="text-content text-from mb-5">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, voluptas!</p>
+                                    <span class="date-time-left">4:00PM</span>
+                                </span>
+                                <span class="text-content text-from mb-5">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius doloremque beatae harum laudantium incidunt quaerat laboriosam, molestias error exercitationem est.</p>
+                                    <span class="date-time-left">4:30PM</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text text-right flex-row-reverse">
+                            <div class="image-wrapper ml-2">
+                                <img src="src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg"
+                                alt="Aiony Haust"
+                                class="img-fluid-cover img-fluid-cover-child">
+                            </div>
+                            <div class="text-wrapper">
+                                <span class="text-content text-from-me mb-5 bg-primary">
+                                    <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius doloremque beatae harum laudantium incidunt quaerat laboriosam, molestias error exercitationem est.</p>
+                                    <span class="date-time-right">4:30PM</span>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="message mx-3 mt-5">
+                    <div class="message-content">
+                        <button type="button" 
+                        class="btn-message-plus ml-2">
+                            <i data-feather="plus"></i>
+                        </button>
+                        <button type="button" 
+                        class="btn-message-image">
+                            <i data-feather="image"></i>
+                        </button>
+                        <button type="button"
+                        class="btn-message-voice">
+                            <i data-feather="mic"></i>
+                        </button>
+
+                        <input type="text"
+                        name="message"
+                        id="message"
+                        class="input-message"
+                        placeholder="Type a message here...">
+
+                        <button type="button"
+                        class="btn-message-emoji">
+                            <i data-feather="smile"></i>
+                        </button>
+                        <button type="button"
+                        class="btn-message-send rotate-send mr-2">
+                            <i data-feather="send"></i>
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="col-3">SIDEBAR CHAT INFO</div>
+            <div class="col-4">SIDEBAR CHAT INFO</div>
         </div>
     </div>
 

@@ -1,7 +1,6 @@
 .chats{
     box-shadow: $shadow-neumorphism;
-    background-color: $body-bg;
-    border-radius: $radius;
+    background-color: #fff;
 
     .text-header{
         display: flex;
@@ -18,7 +17,7 @@
             align-items: center;
             background-color: transparent;
             font-weight: 600;
-            font-size: 18px;
+            font-size: 1em;
             box-shadow: $shadow-neumorphism;
             border-radius: $radius;
             transition: all .2s ease;
@@ -47,7 +46,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #0061f211;
+        box-shadow: $shadow-unset;
+        background-color: transparent;
         transition: all .2s ease;
 
         .search-input {
@@ -61,14 +61,12 @@
             width: 20px;
             height: 20px;
         }
-
-        &:focus-within{
-            box-shadow: $shadow-lg;
-            background-color: #fff;
-        }
     }
 
     .chat-content{
+        overflow-y: auto;
+        height: 65vh;
+        
         .conversations{
             display: flex;
             align-items: center;
@@ -77,14 +75,9 @@
             width: 100%;
             background-color: transparent;
             text-align: left;
-            border-radius: 30px;
 
             &:hover{
-                box-shadow: $shadow-neumorphism;
-            }
-
-            &:active{
-                box-shadow: $shadow-unset;
+                background-color: #0061f211;
             }
         }
     }
