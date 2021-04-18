@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700;800;900&display=swap');
+
+@import 'variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: $font-family !important;
+    line-height: $line-height-base !important;
+    font-size: $font-size-base !important;
+    color: $dark !important;
+    background-color: $body-bg !important;
+    // background-image: $body-image;
+    // background-attachment: fixed;
+    // background-size: cover;
+}
+
+@import 'global-classes';
+
+@import 'chats';
+
+@import 'inbox';
+
+@import 'inbox-details';

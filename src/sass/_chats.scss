@@ -1,0 +1,91 @@
+.chats{
+    box-shadow: $shadow-neumorphism;
+    background-color: $body-bg;
+    border-radius: $radius;
+
+    .text-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .create-new{
+        .btn-create-new{
+            border: none;
+            outline: none;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            font-weight: 600;
+            font-size: 18px;
+            box-shadow: $shadow-neumorphism;
+            border-radius: $radius;
+            transition: all .2s ease;
+
+            .add-icon{
+                background-color: #0061f211;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .feather{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            
+            &:active{
+                box-shadow: $shadow-unset;
+            }
+        }
+    }
+
+    .search-name{
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #0061f211;
+        transition: all .2s ease;
+
+        .search-input {
+            padding: 12px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+
+        .feather{
+            width: 20px;
+            height: 20px;
+        }
+
+        &:focus-within{
+            box-shadow: $shadow-lg;
+            background-color: #fff;
+        }
+    }
+
+    .chat-content{
+        .conversations{
+            display: flex;
+            align-items: center;
+            border: none;
+            outline: none;
+            width: 100%;
+            background-color: transparent;
+            text-align: left;
+            border-radius: 30px;
+
+            &:hover{
+                box-shadow: $shadow-neumorphism;
+            }
+
+            &:active{
+                box-shadow: $shadow-unset;
+            }
+        }
+    }
+}

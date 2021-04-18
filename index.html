@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Chat Interface Web Application</title>
+
+    <link rel="stylesheet" href="src/sass/style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid vh-100 p-0" id="app">
+        <div class="row vh-100 m-3">
+            <div class="col-3">
+                <div class="chats p-3">
+                    <div class="text-header mb-3">
+                        <h4 class="font-weight-bold">Chats</h4>
+                        <span><i data-feather="more-horizontal"></i></span>
+                    </div>
+
+                    <div class="create-new mb-4">
+                        <button class="btn-create-new p-2"
+                        type="button">
+                            <div class="add-icon p-3 mr-2">
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="add-text">Create New</div>
+                        </button>
+                    </div>
+
+                    <div class="search-name mb-4 px-2">
+                        <input type="text" 
+                        name="search-name" 
+                        id="search-name"
+                        class="search-input w-100"
+                        placeholder="Search name...">
+
+                        <span class="pr-2"><i data-feather="search"></i></span>
+                    </div>
+
+                    <div class="chat-content">
+                        <button type="button"
+                        class="conversations btn-convo p-2 mb-1">
+                            <div class="image-wrapper mr-2">
+                                <img src="src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg"
+                                alt="Aiony Haust"
+                                class="img-fluid-cover">
+                                <span class="person-status"></span>
+                            </div>
+                            <div class="persons-chat">
+                                <span class="persons-name">Aiony Haust</span>
+                                <span class="persons-text text-muted text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!</span>
+                            </div>
+                        </button>
+                        <button type="button"
+                        class="conversations btn-convo p-2 mb-1">
+                            <div class="image-wrapper mr-2">
+                                <img src="src/images/austin-wade-X6Uj51n5CE8-unsplash.jpg"
+                                alt="Austin Wade"
+                                class="img-fluid-cover">
+                                <span class="person-status"></span>
+                            </div>
+                            <div class="persons-chat">
+                                <span class="persons-name">Austin Wade</span>
+                                <span class="persons-text text-muted text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!</span>
+                            </div>
+                        </button>
+                        <button type="button"
+                        class="conversations btn-convo p-2 mb-1">
+                            <div class="image-wrapper mr-2">
+                                <img src="src/images/houcine-ncib-B4TjXnI0Y2c-unsplash.jpg"
+                                alt="Houcine Ncib"
+                                class="img-fluid-cover">
+                                <span class="person-status"></span>
+                            </div>
+                            <div class="persons-chat">
+                                <span class="persons-name">Houcine Ncib</span>
+                                <span class="persons-text text-muted text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!</span>
+                            </div>
+                        </button>
+                        <button type="button"
+                        class="conversations btn-convo p-2 mb-1">
+                            <div class="image-wrapper mr-2">
+                                <img src="src/images/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg"
+                                alt="Joseph Gonzalez"
+                                class="img-fluid-cover">
+                                <span class="person-status"></span>
+                            </div>
+                            <div class="persons-chat">
+                                <span class="persons-name">Joseph Gonzalez</span>
+                                <span class="persons-text text-muted text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!</span>
+                            </div>
+                        </button>
+                        <button type="button"
+                        class="conversations btn-convo p-2 mb-1">
+                            <div class="image-wrapper mr-2">
+                                <img src="src/images/jurica-koletic-7YVZYZeITc8-unsplash.jpg"
+                                alt="Jurica Koletic"
+                                class="img-fluid-cover">
+                                <span class="person-status"></span>
+                            </div>
+                            <div class="persons-chat">
+                                <span class="persons-name">Jurica Koletic</span>
+                                <span class="persons-text text-muted text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!</span>
+                            </div>
+                        </button>
+                        <button type="button"
+                        class="conversations btn-convo p-2 mb-1">
+                            <div class="image-wrapper mr-2">
+                                <img src="src/images/michael-dam-mEZ3PoFGs_k-unsplash.jpg"
+                                alt="Richeale Dam"
+                                class="img-fluid-cover">
+                                <span class="person-status"></span>
+                            </div>
+                            <div class="persons-chat">
+                                <span class="persons-name">Richeale Dam</span>
+                                <span class="persons-text text-muted text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="inbox">
+                    <div class="inbox-header">
+                        <div class="image-wrapper mr-2">
+                            <img src="src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg"
+                            alt="Aiony Haust"
+                            class="img-fluid-cover">
+                            <span class="person-status"></span>
+                        </div>
+                        <div class="persons-chat">
+                            <span class="persons-name h5 mb-0">Aiony Haust</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">SIDEBAR CHAT INFO</div>
+        </div>
+    </div>
+
+    <script src="node_modules/feather-icons/dist/feather.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="src/js/index.js"></script>
+
+</body>
+</html>
