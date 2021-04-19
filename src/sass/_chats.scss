@@ -46,8 +46,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        box-shadow: $shadow-unset;
-        background-color: transparent;
+        // box-shadow: $shadow-unset;
+        background-color: $light;
         transition: all .2s ease;
 
         .search-input {
