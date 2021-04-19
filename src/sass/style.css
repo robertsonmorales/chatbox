@@ -105,12 +105,6 @@ body {
   width: 200px;
 }
 
-.chats {
-  -webkit-box-shadow: 16px 16px 32px #eceeef, -16px -16px 32px #ffffff;
-          box-shadow: 16px 16px 32px #eceeef, -16px -16px 32px #ffffff;
-  background-color: #fff;
-}
-
 .chats .text-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,14 +127,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: transparent;
+  background-color: #f8f9fa;
   font-weight: 600;
   font-size: 1em;
-  -webkit-box-shadow: 16px 16px 32px #eceeef, -16px -16px 32px #ffffff;
-          box-shadow: 16px 16px 32px #eceeef, -16px -16px 32px #ffffff;
+  -webkit-box-shadow: 11px 11px 22px #e4e6e8, -11px -11px 22px #ffffff;
+          box-shadow: 11px 11px 22px #e4e6e8, -11px -11px 22px #ffffff;
   border-radius: 1rem;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 .chats .create-new .btn-create-new .add-icon {
@@ -163,12 +157,12 @@ body {
 }
 
 .chats .create-new .btn-create-new:active {
-  -webkit-box-shadow: inset 16px 16px 32px #eceeef, inset -16px -16px 32px #ffffff;
-          box-shadow: inset 16px 16px 32px #eceeef, inset -16px -16px 32px #ffffff;
+  -webkit-box-shadow: inset 11px 11px 22px #e4e6e8, inset -11px -11px 22px #ffffff;
+          box-shadow: inset 11px 11px 22px #e4e6e8, inset -11px -11px 22px #ffffff;
 }
 
 .chats .search-name {
-  border-radius: 30px;
+  border-radius: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,9 +172,11 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-shadow: 11px 11px 22px #e4e6e8, -11px -11px 22px #ffffff;
+          box-shadow: 11px 11px 22px #e4e6e8, -11px -11px 22px #ffffff;
   background-color: #f8f9fa;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 .chats .search-name .search-input {
@@ -193,6 +189,11 @@ body {
 .chats .search-name .feather {
   width: 20px;
   height: 20px;
+}
+
+.chats .search-name:focus-within {
+  -webkit-box-shadow: inset 11px 11px 22px #e4e6e8, inset -11px -11px 22px #ffffff;
+          box-shadow: inset 11px 11px 22px #e4e6e8, inset -11px -11px 22px #ffffff;
 }
 
 .chats .chat-content {
@@ -250,13 +251,18 @@ body {
   color: #0061f2;
 }
 
+.inbox .inbox-content {
+  overflow-y: auto;
+  height: 70vh;
+}
+
 .inbox .inbox-content .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .inbox .inbox-content .text-wrapper {
@@ -267,16 +273,14 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 .inbox .inbox-content .text-wrapper .text-content {
   background-color: #fff;
-  -webkit-box-shadow: 16px 16px 32px #eceeef, -16px -16px 32px #ffffff;
-          box-shadow: 16px 16px 32px #eceeef, -16px -16px 32px #ffffff;
+  -webkit-box-shadow: 11px 11px 22px #e4e6e8, -11px -11px 22px #ffffff;
+          box-shadow: 11px 11px 22px #e4e6e8, -11px -11px 22px #ffffff;
   padding: 12px;
+  max-width: 75%;
 }
 
 .inbox .inbox-content .text-wrapper .text-content p {
@@ -305,13 +309,25 @@ body {
   border-radius: 20px 20px 2px 20px;
 }
 
+.inbox .inbox-content .text-wrapper-left {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.inbox .inbox-content .text-wrapper-right {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 .message {
   position: relative;
 }
 
 .message .message-content {
-  -webkit-box-shadow: 16px 16px 32px #eceeef, -16px -16px 32px #ffffff;
-          box-shadow: 16px 16px 32px #eceeef, -16px -16px 32px #ffffff;
+  -webkit-box-shadow: 11px 11px 22px #e4e6e8, -11px -11px 22px #ffffff;
+          box-shadow: 11px 11px 22px #e4e6e8, -11px -11px 22px #ffffff;
   border-radius: 1rem;
   background-color: #fff;
   display: -webkit-box;
@@ -335,12 +351,7 @@ body {
   border: none;
   outline: none;
   background-color: transparent;
-  padding: 8px;
-}
-
-.message .message-content button .feather {
-  width: 20px;
-  height: 20px;
+  padding: 10px;
 }
 
 .message .message-content button:hover {
@@ -367,7 +378,6 @@ body {
       -ms-flex: 1;
           flex: 1;
   border-radius: 20px;
-  font-size: .9em !important;
 }
 
 .message .message-content:focus-within {
@@ -392,6 +402,46 @@ body {
 
 .conversation-info .avatar .image-wrapper .person-status {
   right: 10px !important;
+}
+
+.conversation-info .more-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.conversation-info .more-details button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  border: none;
+  outline: none;
+  padding: 12px;
+  border-radius: 1rem;
+  background-color: transparent;
+}
+
+.conversation-info .more-details button .feather {
+  width: 20px;
+  height: 20px;
+}
+
+.conversation-info .more-details button:hover {
+  background-color: #0061f211;
 }
 
 /* width */

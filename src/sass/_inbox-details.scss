@@ -11,4 +11,30 @@
             }
         }
     }
+
+    .more-details{
+        display: flex;
+        flex-direction: column;
+
+        button{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            border: none;
+            outline: none;
+            padding: 12px;
+            border-radius: $radius;
+            background-color: transparent;
+
+            .feather{
+                width: 20px;
+                height: 20px;
+            }
+
+            &:hover{
+                background-color: #0061f211;
+            }
+        }
+    }
 }
