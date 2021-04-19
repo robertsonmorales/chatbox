@@ -1,0 +1,14 @@
+.conversation-info{
+    .avatar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .image-wrapper{
+            .person-status{
+                right: 10px !important;
+            }
+        }
+    }
+}

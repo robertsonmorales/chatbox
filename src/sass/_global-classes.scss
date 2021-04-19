@@ -14,18 +14,38 @@
     }
 
     .img-fluid-cover-child{
-        width: 40px !important;
-        height: 40px !important;
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .img-fluid-main{
+        display: flex;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 50%;
     }
 
     .person-status{
         padding: 5px;
-        background-color: $success;
+        border: 3px solid white;
         border-radius: 50%;
         position: absolute;
         bottom: 0;
-        right: 5px;
-        box-shadow: $shadow-sm;
+        right: 0px;
+    }
+
+    .active{
+        background-color: $success;
+    }
+
+    .idle{
+        background-color: $warning;
+    }
+
+    .in-active{
+        background-color: #777;
     }
 }
 
