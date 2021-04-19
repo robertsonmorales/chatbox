@@ -29,20 +29,23 @@
     }
 
     .inbox-content{
+        overflow-y: auto;
+        height: 70vh;
+
         .text{
             display: flex;
-            align-items: flex-start;
+            align-items: flex-end;
         }
 
         .text-wrapper{
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
 
             .text-content{
                 background-color: #fff;
                 box-shadow: $shadow-neumorphism;
                 padding: 12px;
+                max-width: 75%;
 
                 p{
                     font-weight: 500;
@@ -71,6 +74,14 @@
                 border-radius: 20px 20px 2px 20px;
             }
         }
+
+        .text-wrapper-left{
+            align-items: flex-start;
+        }
+
+        .text-wrapper-right{
+            align-items: flex-end;
+        }
     }
 }
 
@@ -91,12 +102,7 @@
             border: none;
             outline: none;
             background-color: transparent;
-            padding: 8px;
-
-            .feather{
-                width: 20px;
-                height: 20px;
-            }
+            padding: 10px;
 
             &:hover{
                 color: $primary;
@@ -120,7 +126,6 @@
             background-color: $light;
             flex: 1;
             border-radius: 20px;
-            font-size: .9em !important;
         }
 
         &:focus-within{

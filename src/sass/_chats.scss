@@ -1,6 +1,8 @@
 .chats{
-    box-shadow: $shadow-neumorphism;
-    background-color: #fff;
+    // background-color: #fff;
+    // box-shadow: $shadow-neumorphism;
+    // border-top-right-radius: 1rem;
+    // border-bottom-right-radius: 1rem;
 
     .text-header{
         display: flex;
@@ -9,18 +11,20 @@
     }
 
     .create-new{
+        // display: none;
+
         .btn-create-new{
             border: none;
             outline: none;
             width: 100%;
             display: flex;
             align-items: center;
-            background-color: transparent;
+            background-color: $light;
             font-weight: 600;
             font-size: 1em;
             box-shadow: $shadow-neumorphism;
             border-radius: $radius;
-            transition: all .2s ease;
+            transition: all .4s ease;
 
             .add-icon{
                 background-color: #0061f211;
@@ -42,13 +46,13 @@
     }
 
     .search-name{
-        border-radius: 30px;
+        border-radius: $radius;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        // box-shadow: $shadow-unset;
+        box-shadow: $shadow-neumorphism;
         background-color: $light;
-        transition: all .2s ease;
+        transition: all .4s ease;
 
         .search-input {
             padding: 12px;
@@ -60,6 +64,10 @@
         .feather{
             width: 20px;
             height: 20px;
+        }
+
+        &:focus-within{
+            box-shadow: $shadow-unset;
         }
     }
 

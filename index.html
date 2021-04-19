@@ -27,6 +27,7 @@
                     </div>
 
                     <div class="text-header p-3">
+                        <!-- p-3 -->
                         <h4 class="font-weight-bold">Chats</h4>
                         <span><i data-feather="more-horizontal"></i></span>
                     </div>
@@ -136,9 +137,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-5">
-                <div class="inbox m-3">
-                    <div class="inbox-header mb-5">
+            <div class="col-6 border-left border-right">
+                <div class="inbox">
+                    <div class="inbox-header mx-3 mt-3 mb-5">
                         <div class="image-wrapper mr-2">
                             <img src="src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg"
                             alt="Aiony Haust"
@@ -162,20 +163,21 @@
                         </div>
                     </div>
 
-                    <div class="inbox-content">
+                    <div class="inbox-content p-3"
+                    id="convo">
 
                         <div class="text text-left">
-                            <div class="image-wrapper mr-2">
+                            <div class="image-wrapper mr-2 mb-3">
                                 <img src="src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg"
                                 alt="Aiony Haust"
                                 class="img-fluid-cover img-fluid-cover-child">
                             </div>
-                            <div class="text-wrapper">
-                                <span class="text-content text-from mb-5">
+                            <div class="text-wrapper text-wrapper-left">
+                                <span class="text-content text-from mb-3">
                                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, voluptas!</p>
                                     <span class="date-time-left">4:00PM</span>
                                 </span>
-                                <span class="text-content text-from mb-5">
+                                <span class="text-content text-from mb-3">
                                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius doloremque beatae harum laudantium incidunt quaerat laboriosam, molestias error exercitationem est.</p>
                                     <span class="date-time-left">4:30PM</span>
                                 </span>
@@ -183,22 +185,27 @@
                         </div>
 
                         <div class="text text-right flex-row-reverse">
-                            <div class="image-wrapper ml-2">
-                                <img src="src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg"
-                                alt="Aiony Haust"
-                                class="img-fluid-cover img-fluid-cover-child">
-                            </div>
-                            <div class="text-wrapper">
-                                <span class="text-content text-from-me mb-5 bg-primary">
+                            <div class="text-wrapper text-wrapper-right">
+                                <span class="text-content text-from-me mb-3 bg-primary">
                                     <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius doloremque beatae harum laudantium incidunt quaerat laboriosam, molestias error exercitationem est.</p>
                                     <span class="date-time-right">4:30PM</span>
+                                </span>
+
+                                <span class="text-content text-from-me mb-3 bg-primary">
+                                    <p class="text-white">Lorem ipsum dolor sit amet.</p>
+                                    <span class="date-time-right">4:32PM</span>
+                                </span>
+
+                                <span class="text-content text-from-me mb-3 bg-primary">
+                                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos magni eum beatae soluta assumenda nobis.</p>
+                                    <span class="date-time-right">5:32PM</span>
                                 </span>
                             </div>
                         </div>
 
                     </div>
                 </div>
-                <div class="message mx-3 mt-5">
+                <div class="message mx-3">
                     <div class="message-content">
                         <button type="button" 
                         class="btn-message-plus ml-2">
@@ -216,7 +223,7 @@
                         <input type="text"
                         name="message"
                         id="message"
-                        class="form-control my-2 mr-2"
+                        class="form-control my-2 mr-2 p-4"
                         placeholder="Type a message here...">
 
                         <button type="button"
@@ -230,9 +237,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="conversation-info m-3">
-                    <div class="avatar">
+            <div class="col-3">
+                <div class="conversation-info vh-100">
+                    <div class="avatar p-3">
                         <div class="image-wrapper mb-2">
                             <img src="src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg"
                             alt="Aiony Haust"
@@ -242,6 +249,30 @@
                         <div class="persons-chat">
                             <span class="persons-name h5">Aiony Haust</span>
                         </div>
+                    </div>
+
+                    <div class="more-details mx-3">
+                        <button tpye="button"
+                        class="btn-media mb-2">
+                            <span class="ml-2"><i data-feather="image"></i></span>
+                            <span>Photos & Videos</span>
+                        </button>
+                        <button tpye="button"
+                        class="btn-search-coversation mb-2">
+                            <span class="ml-2"><i data-feather="search"></i></span>
+                            <span>Search Conversation</span>
+                        </button>
+                        <button tpye="button"
+                        class="btn-group mb-2">
+                            <span class="ml-2"><i data-feather="users"></i></span>
+                            <span>Create Group with Aiony Haust</span>
+                        </button>
+
+                        <button tpye="button"
+                        class="btn-block mb-2">
+                            <span class="ml-2"><i data-feather="user-x"></i></span>
+                            <span>Block</span>
+                        </button>
                     </div>
                 </div>
             </div>
