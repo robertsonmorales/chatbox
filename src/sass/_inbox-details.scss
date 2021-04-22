@@ -23,7 +23,7 @@
             flex-direction: row-reverse;
             border: none;
             outline: none;
-            padding: 12px;
+            padding: 12px 15px;
             border-radius: $radius;
             background-color: transparent;
 
@@ -33,7 +33,11 @@
             }
 
             &:hover{
-                background-color: #0061f211;
+                box-shadow: $shadow-neumorphism;
+            }
+
+            &:active{
+                box-shadow: $shadow-unset;
             }
         }
     }

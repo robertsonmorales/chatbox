@@ -105,6 +105,14 @@ body {
   width: 200px;
 }
 
+.font-size-sm {
+  font-size: 0.7em !important;
+}
+
+.rounded {
+  border-radius: 20px !important;
+}
+
 .chats .text-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -276,7 +284,7 @@ body {
 }
 
 .inbox .inbox-content .text-wrapper .text-content {
-  background-color: #fff;
+  background-color: transparent;
   -webkit-box-shadow: 11px 11px 22px #e4e6e8, -11px -11px 22px #ffffff;
           box-shadow: 11px 11px 22px #e4e6e8, -11px -11px 22px #ffffff;
   padding: 12px;
@@ -284,9 +292,8 @@ body {
 }
 
 .inbox .inbox-content .text-wrapper .text-content p {
-  font-weight: 500;
+  font-weight: lighter !important;
   margin-bottom: 0;
-  font-size: .9em;
 }
 
 .inbox .inbox-content .text-wrapper .text-content .date-time-left {
@@ -299,6 +306,18 @@ body {
   font-size: .7em;
   color: #ddd;
   font-weight: 300 !important;
+}
+
+.inbox .inbox-content .text-wrapper .text-content-missed-call .feather {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 16px;
+  height: 16px;
+}
+
+.inbox .inbox-content .text-wrapper .text-content-missed-call .btn-call-back {
+  text-decoration: none;
+  color: #0061f2;
 }
 
 .inbox .inbox-content .text-wrapper .text-from {
@@ -329,7 +348,7 @@ body {
   -webkit-box-shadow: 11px 11px 22px #e4e6e8, -11px -11px 22px #ffffff;
           box-shadow: 11px 11px 22px #e4e6e8, -11px -11px 22px #ffffff;
   border-radius: 1rem;
-  background-color: #fff;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -352,6 +371,11 @@ body {
   outline: none;
   background-color: transparent;
   padding: 10px;
+}
+
+.message .message-content button .feather {
+  width: 20px;
+  height: 20px;
 }
 
 .message .message-content button:hover {
@@ -430,7 +454,7 @@ body {
           flex-direction: row-reverse;
   border: none;
   outline: none;
-  padding: 12px;
+  padding: 12px 15px;
   border-radius: 1rem;
   background-color: transparent;
 }
@@ -441,7 +465,13 @@ body {
 }
 
 .conversation-info .more-details button:hover {
-  background-color: #0061f211;
+  -webkit-box-shadow: 11px 11px 22px #e4e6e8, -11px -11px 22px #ffffff;
+          box-shadow: 11px 11px 22px #e4e6e8, -11px -11px 22px #ffffff;
+}
+
+.conversation-info .more-details button:active {
+  -webkit-box-shadow: inset 11px 11px 22px #e4e6e8, inset -11px -11px 22px #ffffff;
+          box-shadow: inset 11px 11px 22px #e4e6e8, inset -11px -11px 22px #ffffff;
 }
 
 /* width */
