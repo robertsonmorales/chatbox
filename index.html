@@ -23,6 +23,30 @@
 <body>
     <div class="container-fluid p-0" id="app">
         <div class="row no-gutters">
+            <div class="col-1 bg-primary">
+                <div class="sidebar vh-100">
+                    <ul class="w-100">
+                        <li>
+                            <a href="#contacts" class="p-4 w-100">
+                                <i data-feather="users"></i>
+                                <span class="font-size-sm">Contacts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#conversations" class="p-4 w-100">
+                                <i data-feather="message-square"></i>
+                                <span class="font-size-sm">Conversations</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#calendar" class="p-4 w-100">
+                                <i data-feather="calendar"></i>
+                                <span class="font-size-sm">Events</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="col-3">
                 <div class="chats vh-100">
 
@@ -32,7 +56,7 @@
                             <div class="add-icon p-2 mr-3">
                                 <i data-feather="plus"></i>
                             </div>
-                            <div class="add-text">Create New</div>
+                            <div class="add-text">Create New Conversation</div>
                         </button>
                     </div>
 
@@ -51,103 +75,12 @@
 
                         <span class="pr-2"><i data-feather="search"></i></span>
                     </div>
-
-                    <div class="chat-content">
-                        <button type="button"
-                        class="conversations btn-convo py-2 px-3 mb-1">
-                            <div class="image-wrapper mr-2">
-                                <img src="src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg"
-                                alt="Aiony Haust"
-                                class="img-fluid-cover">
-                                <span class="person-status active"></span>
-                            </div>
-                            <div class="persons-chat">
-                                <span class="persons-name">Aiony Haust</span>
-                                <span class="persons-text text-muted text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!</span>
-                            </div>
-                        </button>
-                        <button type="button"
-                        class="conversations btn-convo py-2 px-3 mb-1">
-                            <div class="image-wrapper mr-2">
-                                <img src="src/images/austin-wade-X6Uj51n5CE8-unsplash.jpg"
-                                alt="Austin Wade"
-                                class="img-fluid-cover">
-                                <span class="person-status active"></span>
-                            </div>
-                            <div class="persons-chat">
-                                <span class="persons-name">Austin Wade</span>
-                                <span class="persons-text text-muted text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!</span>
-                            </div>
-                        </button>
-                        <button type="button"
-                        class="conversations btn-convo py-2 px-3 mb-1">
-                            <div class="image-wrapper mr-2">
-                                <img src="src/images/houcine-ncib-B4TjXnI0Y2c-unsplash.jpg"
-                                alt="Houcine Ncib"
-                                class="img-fluid-cover">
-                                <span class="person-status idle"></span>
-                            </div>
-                            <div class="persons-chat">
-                                <span class="persons-name">Houcine Ncib</span>
-                                <span class="persons-text text-muted text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!</span>
-                            </div>
-                        </button>
-                        <button type="button"
-                        class="conversations btn-convo py-2 px-3 mb-1">
-                            <div class="image-wrapper mr-2">
-                                <img src="src/images/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg"
-                                alt="Joseph Gonzalez"
-                                class="img-fluid-cover">
-                                <span class="person-status in-active"></span>
-                            </div>
-                            <div class="persons-chat">
-                                <span class="persons-name">Joseph Gonzalez</span>
-                                <span class="persons-text text-muted text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!</span>
-                            </div>
-                        </button>
-                        <button type="button"
-                        class="conversations btn-convo py-2 px-3 mb-1">
-                            <div class="image-wrapper mr-2">
-                                <img src="src/images/jurica-koletic-7YVZYZeITc8-unsplash.jpg"
-                                alt="Jurica Koletic"
-                                class="img-fluid-cover">
-                                <span class="person-status active"></span>
-                            </div>
-                            <div class="persons-chat">
-                                <span class="persons-name">Jurica Koletic</span>
-                                <span class="persons-text text-muted text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!</span>
-                            </div>
-                        </button>
-                        <button type="button"
-                        class="conversations btn-convo py-2 px-3 mb-1">
-                            <div class="image-wrapper mr-2">
-                                <img src="src/images/michael-dam-mEZ3PoFGs_k-unsplash.jpg"
-                                alt="Richeale Dam"
-                                class="img-fluid-cover">
-                                <span class="person-status active"></span>
-                            </div>
-                            <div class="persons-chat">
-                                <span class="persons-name">Richeale Dam</span>
-                                <span class="persons-text text-muted text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!</span>
-                            </div>
-                        </button>
-                        <button type="button"
-                        class="conversations btn-convo py-2 px-3 mb-1">
-                            <div class="image-wrapper mr-2">
-                                <img src="src/images/prince-akachi-J1OScm_uHUQ-unsplash.jpg"
-                                alt="Princess Akachi"
-                                class="img-fluid-cover">
-                                <span class="person-status in-active"></span>
-                            </div>
-                            <div class="persons-chat">
-                                <span class="persons-name">Princess Akachi</span>
-                                <span class="persons-text text-muted text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!</span>
-                            </div>
-                        </button>
-                    </div>
+                    <!-- THIS IS CHAT CONVERSATIONS -->
+                    <div class="chat-content" id="conversation-area"></div>
+                    <!-- ENDS HERE -->
                 </div>
             </div>
-            <div class="col-6 border-left border-right">
+            <div class="col-5 border-left border-right">
                 <div class="inbox">
                     <div class="inbox-header mx-3 mt-3 mb-5">
                         <div class="image-wrapper mr-2">
