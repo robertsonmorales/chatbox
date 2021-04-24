@@ -8,6 +8,8 @@
     <title>Chatbox</title>
 
     <!-- preloads -->
+    
+    <!-- images -->
     <link rel="preload" href="src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg" as="image">
     <link rel="preload" href="src/images/austin-wade-X6Uj51n5CE8-unsplash.jpg" as="image">
     <link rel="preload" href="src/images/houcine-ncib-B4TjXnI0Y2c-unsplash.jpg" as="image">
@@ -17,7 +19,25 @@
     <link rel="preload" href="src/images/prince-akachi-J1OScm_uHUQ-unsplash.jpg" as="image">
     <!-- ends here -->
 
+    <!-- styles -->
+    <link rel="preload" href="src/plugins/bootstrap/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="src/sass/style.css" as="style">
+    <!-- ends here -->
+
+    <!-- scripts -->
+    <link rel="preload" href="src/plugins/feather-icons/dist/feather.min.js" as="script">    
+    <link rel="preload" href="src/plugins/jquery/dist/jquery.min.js" as="script">    
+    <link rel="preload" href="src/plugins/bootstrap/dist/js/bootstrap.min.js" as="script">    
+    <link rel="preload" href="src/js/index.js" as="script">    
+    <!-- ends here -->
+
+    <!-- ends here -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
     <link rel="stylesheet" href="src/plugins/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="src/sass/style.css">
 </head>
 <body>
@@ -47,6 +67,7 @@
                     </ul>
                 </div>
             </div>
+
             <div class="col-3">
                 <div class="chats vh-100">
 
@@ -80,7 +101,9 @@
                     <!-- ENDS HERE -->
                 </div>
             </div>
-            <div class="col-5 border-left border-right">
+
+            <!-- CHAT CONTENT -->
+            <div class="col-5 border-left border-right" id="chat-content-area">
                 <div class="inbox">
                     <div class="inbox-header mx-3 mt-3 mb-5">
                         <div class="image-wrapper mr-2">
@@ -205,7 +228,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <!-- ENDS HERE -->
+
+            <!-- MORE INFO -->
+            <div class="col-3" id="more-option-area">
                 <div class="conversation-info vh-100">
                     <div class="avatar p-3">
                         <div class="image-wrapper mb-2">
@@ -244,13 +270,39 @@
                     </div>
                 </div>
             </div>
+            <!-- ENDS HERE -->
         </div>
+
+        <div class="modal fade" 
+            id="modal" 
+            tabindex="-1" 
+            role="dialog" 
+            aria-labelledby="modal" 
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered animate__animated animate__fadeInDown animate_faster" role="document">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modal title">Block this person</h5>
+                  <button type="button" class="close btn-cancel" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i data-feather="x"></i></span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <span>This conversation will stay in chats unless you delete it.</span>
+                </div>
+                <div class="modal-footer border-0 bg-light">
+                  <button type="button" class="btn text-primary btn-cancel" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary">Block</button>
+                </div>
+              </div>
+            </div>
+        </div>  
     </div>
 
-    <script src="src/plugins/feather-icons/dist/feather.min.js"></script>
-    <script src="src/plugins/jquery/dist/jquery.min.js"></script>
-    <script src="src/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="src/js/index.js"></script>
+    <script src="src/plugins/feather-icons/dist/feather.min.js" defer></script>
+    <script src="src/plugins/jquery/dist/jquery.min.js" defer></script>
+    <script src="src/plugins/bootstrap/dist/js/bootstrap.min.js" defer></script>
+    <script src="src/js/index.js" defer></script>
 
 </body>
 </html>
