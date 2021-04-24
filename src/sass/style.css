@@ -7,6 +7,7 @@
 
 html {
   overflow-y: hidden;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -65,7 +66,7 @@ body {
 }
 
 .image-wrapper .person-status {
-  padding: 5px;
+  padding: 4px;
   border: 3px solid white;
   border-radius: 50%;
   position: absolute;
@@ -101,7 +102,7 @@ body {
 
 .persons-chat .persons-text {
   font-size: 12px;
-  width: 200px;
+  width: 240px;
 }
 
 .font-size-sm {
@@ -112,12 +113,37 @@ body {
   border-radius: 20px !important;
 }
 
-.bg-primary {
+.bg-primary,
+.btn-primary {
   background-color: #009688 !important;
+}
+
+.btn:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem #00968840 !important;
+          box-shadow: 0 0 0 0.2rem #00968840 !important;
+}
+
+.btn-primary {
+  border-color: #20c997 !important;
+}
+
+.text-primary {
+  color: #009688 !important;
 }
 
 button {
   font-family: "Roboto", sans-serif !important;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal .modal-content {
+  -webkit-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  border: 0.0625rem solid rgba(231, 234, 243, 0.7) !important;
+  border-radius: 20px;
 }
 
 .sidebar {

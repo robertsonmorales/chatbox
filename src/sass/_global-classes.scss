@@ -28,7 +28,7 @@
     }
 
     .person-status{
-        padding: 5px;
+        padding: 4px;
         border: 3px solid white;
         border-radius: 50%;
         position: absolute;
@@ -59,7 +59,7 @@
 
     .persons-text{
         font-size: 12px;
-        width: 200px;
+        width: 240px;
     }
 }
 
@@ -71,10 +71,36 @@
     border-radius: 20px !important;
 }
 
-.bg-primary{
+.bg-primary,
+.btn-primary{
     background-color: $primary !important;
+}
+
+.btn{
+    &:focus{
+        box-shadow: 0 0 0 0.2rem unquote($primary + "40") !important;
+    }
+}
+.btn-primary{
+    border-color: $success !important;
+}
+
+.text-primary{
+    color: $primary !important;
 }
 
 button{
     font-family: $font-family !important;
+}
+
+
+// modal
+.modal{
+    background-color: rgba(0,0,0,0.4);
+
+    .modal-content{
+        box-shadow: $shadow-sm;
+        border: $border !important;
+        border-radius: 20px;
+    }
 }
