@@ -186,5 +186,8 @@ $(function(){
 });
 
 function openConversation(index){
-    $('.btn-convo-1').children(1).children()[3].classList.remove('text-unread');
+    let btnConvo = $('.btn-convo-'+index).children(1).children()[3];
+    if(btnConvo.classList.contains('text-unread')){
+        btnConvo.classList.remove('text-unread');
+    }
 }
