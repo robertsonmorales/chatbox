@@ -1,58 +1,173 @@
 [
     {
         "id": 1,
-        "profile_picture": "src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg",
-        "account_status": "active",
-        "name": "Aiony Haust",
-        "last_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!",
-        "last_date-time": "8:00PM"
+        "conversations": {
+            "type": "group",
+            "group_name": "DESIGNER TEAM",
+            "member": [
+                {
+                    "profile_picture": "src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg",
+                    "name": "Aiony Haust"
+                },
+                {
+                    "profile_picture": "src/images/austin-wade-X6Uj51n5CE8-unsplash.jpg",
+                    "name": "Austin Wade"
+                },
+                {
+                    "profile_picture": "src/images/houcine-ncib-B4TjXnI0Y2c-unsplash.jpg",
+                    "name": "Houcine Ncib"
+                },
+                {
+                    "profile_picture": "src/images/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg",
+                    "name": "Joseph Gonzalez"
+                },
+                {
+                    "profile_picture": "src/images/jurica-koletic-7YVZYZeITc8-unsplash.jpg",
+                    "name": "Jurica Koletic"
+                }
+            ],
+            "status": "unread",
+            "last_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!",
+            "text_from": "You",
+            "date_time": "8:00PM"
+        }
     },
     {
         "id": 2,
-        "profile_picture": "src/images/austin-wade-X6Uj51n5CE8-unsplash.jpg",
-        "account_status": "active",
-        "name": "Austin Wade",
-        "last_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!",
-        "last_date-time": "7:03PM"
+        "conversations": {
+            "type": "single",
+            "member": {
+                "profile_picture": "src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg",
+                "account_status": "active",
+                "name": "Aiony Haust"
+            },
+            "status": "unread",
+            "last_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!",
+            "text_from": "You",
+            "date_time": "8:30PM"
+        }
     },
     {
         "id": 3,
-        "profile_picture": "src/images/houcine-ncib-B4TjXnI0Y2c-unsplash.jpg",
-        "account_status": "idle",
-        "name": "Houcine Ncib",
-        "last_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!",
-        "last_date-time": "7:00PM"
+        "conversations": {
+            "type": "group",
+            "group_name": "PRODUCTION TEAM",
+            "member": [
+                {
+                    "profile_picture": "src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg",
+                    "name": "Aiony Haust"
+                },
+                {
+                    "profile_picture": "src/images/austin-wade-X6Uj51n5CE8-unsplash.jpg",
+                    "name": "Austin Wade"
+                },
+                {
+                    "profile_picture": "src/images/houcine-ncib-B4TjXnI0Y2c-unsplash.jpg",
+                    "name": "Houcine Ncib"
+                },
+                {
+                    "profile_picture": "src/images/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg",
+                    "name": "Joseph Gonzalez"
+                },
+                {
+                    "profile_picture": "src/images/jurica-koletic-7YVZYZeITc8-unsplash.jpg",
+                    "name": "Jurica Koletic"
+                }
+            ],
+            "status": "unread",
+            "last_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!",
+            "text_from": "You",
+            "date_time": "8:00PM"
+        }
     },
     {
         "id": 4,
-        "profile_picture": "src/images/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg",
-        "account_status": "in-active",
-        "name": "Joseph Gonzalez",
-        "last_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!",
-        "last_date-time": "6:20PM"
+        "conversations": {
+            "type": "single",
+            "member": {
+                "profile_picture": "src/images/austin-wade-X6Uj51n5CE8-unsplash.jpg",
+                "account_status": "active",
+                "name": "Austin Wade"
+            },
+            "status": "read",
+            "last_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!",
+            "text_from": "Austin Wade",
+            "date_time": "6:30PM"
+        }
     },
     {
         "id": 5,
-        "profile_picture": "src/images/jurica-koletic-7YVZYZeITc8-unsplash.jpg",
-        "account_status": "active",
-        "name": "Jurica Koletic",
-        "last_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!",
-        "last_date-time": "3:20PM"
+        "conversations": {
+            "type": "single",
+            "member": {
+                "profile_picture": "src/images/houcine-ncib-B4TjXnI0Y2c-unsplash.jpg",
+                "account_status": "idle",
+                "name": "Houcine Ncib"
+            },
+            "status": "read",
+            "last_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!",
+            "text_from": "Austin Wade",
+            "date_time": "6:30PM"
+        }
     },
     {
         "id": 6,
-        "profile_picture": "src/images/michael-dam-mEZ3PoFGs_k-unsplash.jpg",
-        "account_status": "active",
-        "name": "Richeale Dam",
-        "last_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!",
-        "last_date-time": "2:22PM"
+        "conversations": {
+            "type": "single",
+            "member": {
+                "profile_picture": "src/images/jurica-koletic-7YVZYZeITc8-unsplash.jpg",
+                "account_status": "active",
+                "name": "Jurica Koletic"
+            },
+            "status": "read",
+            "last_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!",
+            "text_from": "Austin Wade",
+            "date_time": "6:20PM"
+        }
     },
     {
         "id": 7,
-        "profile_picture": "src/images/prince-akachi-J1OScm_uHUQ-unsplash.jpg",
-        "account_status": "in-active",
-        "name": "Princess Akachi",
-        "last_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!",
-        "last_date-time": "12:26PM"
+        "conversations": {
+            "type": "single",
+            "member": {
+                "profile_picture": "src/images/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg",
+                "account_status": "in-active",
+                "name": "Joseph Gonzalez"
+            },
+            "status": "read",
+            "last_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!",
+            "text_from": "Austin Wade",
+            "date_time": "5:20PM"
+        }
+    },
+    {
+        "id": 8,
+        "conversations": {
+            "type": "single",
+            "member": {
+                "profile_picture": "src/images/michael-dam-mEZ3PoFGs_k-unsplash.jpg",
+                "account_status": "active",
+                "name": "Richeale Dam"
+            },
+            "status": "read",
+            "last_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!",
+            "text_from": "Austin Wade",
+            "date_time": "5:20PM"
+        }
+    },
+    {
+        "id": 9,
+        "conversations": {
+            "type": "single",
+            "member": {
+                "profile_picture": "src/images/prince-akachi-J1OScm_uHUQ-unsplash.jpg",
+                "account_status": "in-active",
+                "name": "Princess Akachi"
+            },
+            "status": "read",
+            "last_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum!",
+            "text_from": "Austin Wade",
+            "date_time": "5:20PM"
+        }
     }
 ]

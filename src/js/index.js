@@ -6,18 +6,52 @@ convo.scrollTo(0, convo.scrollHeight);
 $(function(){
     $.get('src/js/conversation.json', function(response){
         // console.log(response);
+
         var html = '';
         $.each(response, function(index, value){
-            html += '<button type="button" class="conversations btn-convo py-2 px-3 mb-1" id="'+index+'">';
-                html += '<div class="image-wrapper mr-2">';
-                    html += '<img src="' + value['profile_picture'] + '" alt="' + value['name'] + '" class="img-fluid-cover">';
-                    html += '<span class="person-status ' + value['account_status'] + '"></span>';
-                html += '</div>';
-                html += '<div class="persons-chat">';
-                    html += '<span class="persons-name">' + value['name'] + '</span>';
-                    html += '<span class="persons-text text-muted text-truncate">' + value['last_text'] + '</span>';
-                html += '</div>';
-            html += '</button>';
+            let conversation = value.conversations;
+            let status = (conversation.status == 'unread') ? 'text-unread' : '';
+
+            if(conversation.type == "group"){
+                let firstFour = conversation.member.slice(0, 4);
+                let moreMember = conversation.member.length - 4;
+                // console.log(firstFour);
+
+                html += '<button type="button" class="conversations btn-convo btn-convo-'+ index +' py-2 px-3" id="'+ index +'" onclick="openConversation('+ index +')">';
+                    html += '<div class="image-wrapper image-wrapper-group mr-2">';
+                        html += '<span>';
+                            html += '<img src="'+ firstFour[0].profile_picture +'" alt="'+ firstFour[0].name +'" class="img-fluid-group">';
+                            html += '<img src="'+ firstFour[1].profile_picture +'" alt="'+ firstFour[1].name +'" class="img-fluid-group">';
+                        html += '</span>';
+                        html += '<span class="position-relative">';
+                            html += '<img src="'+ firstFour[2].profile_picture +'" alt="'+ firstFour[0].name +'" class="img-fluid-group">';
+                            html += '<img src="'+ firstFour[3].profile_picture +'" alt="'+ firstFour[1].name +'" class="img-fluid-group">';
+                        html += '<span class="count-members">+'+moreMember+'</span>';
+                        html += '</span>';
+                    html += '</div>';
+                    html += '<div class="persons-chat w-100">';
+                        html += '<span class="persons-name">'+ conversation.group_name +'</span>';
+                        html += '<span class="persons-text text-muted">';
+                            html += '<span class="text text-truncate">Aiony Haust: text here</span>';
+                            html += '<span>10:32PM</span>';
+                        html += '</span>';
+                    html += '</div>';
+                html += '</button>';
+            }else{
+                html += '<button type="button" class="conversations btn-convo btn-convo-'+ index +' py-2 px-3" id="'+ index +'" onclick="openConversation('+ index +')">';
+                    html += '<div class="image-wrapper mr-2">';
+                        html += '<img src="' + conversation.member.profile_picture + '" alt="' + conversation.member.name + '" class="img-fluid-cover">';
+                        html += '<span class="person-status ' + conversation.member.account_status + '"></span>';
+                    html += '</div>';
+                    html += '<div class="persons-chat w-100">';
+                        html += '<span class="persons-name">' + conversation.member.name + '</span>';
+                        html += '<span class="persons-text text-muted '+ status +'">';
+                            html += '<span class="text text-truncate">'+ conversation.text_from + ': ' + conversation.last_text +'</span>';
+                            html += '<span>'+ conversation.date_time +'</span>';
+                        html += '</span>';
+                    html += '</div>';
+                html += '</button>';   
+            }
 
             $('#conversation-area').html(html);
         });
@@ -25,42 +59,81 @@ $(function(){
         $('#search-name').on('keyup', function(){
             let searchName = $(this).val();
             let searchResults = [];
-            let fixName = searchName.split(' ');
-            let names = [];
             let search_html = '';
             let noResult = '';
 
             // clean or empty conversation area
             $('#conversation-area').empty();
-            // ends here
-
-            // first character of name is uppercase
-            for (let i = 0; i < fixName.length; i++) {
-                names.push(fixName[i].charAt(0).toUpperCase() + fixName[i].slice(1));
-            }
-            // ends here
+            // ends here           
 
             // search name
             response.filter(function(value){
-                if (value.name.includes(names.join(' '))){
-                    searchResults.push(value);
+                let flags = "gi";
+                let pattern = new RegExp(searchName, flags);
+
+                if (value.conversations.type == "group"){
+                    let result = pattern.test(value.conversations.group_name);
+                    if(result){
+                        searchResults.push(value);    
+                    }
+                }else{
+                    let result = pattern.test(value.conversations.member.name);
+                    if(result){
+                        searchResults.push(value);    
+                    }
                 }
             });
+
+            // console.log(searchResults);
             // ends here
 
             // show results
             if(searchResults.length != 0){
-                $.each(searchResults, function(key, value){
-                    search_html += '<button type="button" class="conversations btn-convo py-2 px-3 mb-1" id="'+key+'">';
-                        search_html += '<div class="image-wrapper mr-2">';
-                            search_html += '<img src="' + value['profile_picture'] + '" alt="' + value['name'] + '" class="img-fluid-cover">';
-                            search_html += '<span class="person-status ' + value['account_status'] + '"></span>';
-                        search_html += '</div>';
-                        search_html += '<div class="persons-chat">';
-                            search_html += '<span class="persons-name">' + value['name'] + '</span>';
-                            search_html += '<span class="persons-text text-muted text-truncate">' + value['last_text'] + '</span>';
-                        search_html += '</div>';
-                    search_html += '</button>';
+                $.each(searchResults, function(index, value){
+                    
+                    let conversation = value.conversations;
+                    let status = (conversation.status == 'unread') ? 'text-unread' : '';
+
+                    if(conversation.type == "group"){
+                        let firstFour = conversation.member.slice(0, 4);
+                        let moreMember = conversation.member.length - 4;
+                        // console.log(firstFour);
+
+                        search_html += '<button type="button" class="conversations btn-convo btn-convo-'+ index +' py-2 px-3" id="'+ index +'" onclick="openConversation('+ index +')">';
+                            search_html += '<div class="image-wrapper image-wrapper-group mr-2">';
+                                search_html += '<span>';
+                                    search_html += '<img src="'+ firstFour[0].profile_picture +'" alt="'+ firstFour[0].name +'" class="img-fluid-group">';
+                                    search_html += '<img src="'+ firstFour[1].profile_picture +'" alt="'+ firstFour[1].name +'" class="img-fluid-group">';
+                                search_html += '</span>';
+                                search_html += '<span class="position-relative">';
+                                    search_html += '<img src="'+ firstFour[2].profile_picture +'" alt="'+ firstFour[0].name +'" class="img-fluid-group">';
+                                    search_html += '<img src="'+ firstFour[3].profile_picture +'" alt="'+ firstFour[1].name +'" class="img-fluid-group">';
+                                search_html += '<span class="count-members">+'+moreMember+'</span>';
+                                search_html += '</span>';
+                            search_html += '</div>';
+                            search_html += '<div class="persons-chat w-100">';
+                                search_html += '<span class="persons-name">'+ conversation.group_name +'</span>';
+                                search_html += '<span class="persons-text text-muted">';
+                                    search_html += '<span class="text text-truncate">Aiony Haust: text here</span>';
+                                    search_html += '<span>10:32PM</span>';
+                                search_html += '</span>';
+                            search_html += '</div>';
+                        search_html += '</button>';
+                    }else{
+                        search_html += '<button type="button" class="conversations btn-convo btn-convo-'+ index +' py-2 px-3" id="'+ index +'" onclick="openConversation('+ index +')">';
+                            search_html += '<div class="image-wrapper mr-2">';
+                                search_html += '<img src="' + conversation.member.profile_picture + '" alt="' + conversation.member.name + '" class="img-fluid-cover">';
+                                search_html += '<span class="person-status ' + conversation.member.account_status + '"></span>';
+                            search_html += '</div>';
+                            search_html += '<div class="persons-chat w-100">';
+                                search_html += '<span class="persons-name">' + conversation.member.name + '</span>';
+                                search_html += '<span class="persons-text text-muted '+ status +'">';
+                                    search_html += '<span class="text text-truncate">'+ conversation.text_from + ': ' + conversation.last_text +'</span>';
+                                    search_html += '<span>'+ conversation.date_time +'</span>';
+                                search_html += '</span>';
+                            search_html += '</div>';
+                        search_html += '</button>';   
+                    }
 
                     $('#conversation-area').html(search_html);
                 });
@@ -111,3 +184,7 @@ $(function(){
         $('#modal').removeClass('d-block');
     });
 });
+
+function openConversation(index){
+    $('.btn-convo-1').children(1).children()[3].classList.remove('text-unread');
+}

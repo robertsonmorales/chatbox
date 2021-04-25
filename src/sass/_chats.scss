@@ -50,8 +50,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        box-shadow: $shadow-neumorphism;
-        background-color: $light;
+        background-color: #f3f3f3;
         transition: all .4s ease;
 
         .search-input {
@@ -67,12 +66,13 @@
         }
 
         &:focus-within{
-            box-shadow: $shadow-unset;
+            background-color: #eee;
         }
     }
 
     .chat-content{
         overflow-y: auto;
+        overflow-x: hidden;
         height: 65vh;
         
         .conversations{
@@ -85,7 +85,7 @@
             text-align: left;
 
             &:hover{
-                background-color: #0061f211;
+                background-color: unquote($primary + "11");
             }
         }
     }

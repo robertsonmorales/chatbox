@@ -42,8 +42,8 @@
             flex-direction: column;
 
             .text-content{
-                background-color: transparent;
-                box-shadow: $shadow-neumorphism;
+                background-color: #f3f3f3;
+                border: $border;
                 padding: 12px;
                 max-width: 75%;
 
@@ -60,7 +60,7 @@
 
                 .date-time-right{
                     font-size: .7em;
-                    color: #ddd;
+                    color: #ccc;
                     font-weight: 300 !important;
                 }
             }
@@ -75,6 +75,15 @@
                 .btn-call-back{
                     text-decoration: none;
                     color: $primary;
+                }
+            }
+
+            .text-content-is-img{
+                max-width: 50% !important;
+                transition: all .4s ease;
+
+                &:hover{
+                    opacity: 0.8;
                 }
             }
     
