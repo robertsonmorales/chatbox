@@ -4,8 +4,8 @@
   "description": "This is a chatbox UI",
   "main": "index.js",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "bootstrap": "^4.6.0",
-    "feather-icons": "^4.28.0",
     "jquery": "^3.6.0",
     "vue": "^2.6.12",
     "vue-router": "^3.5.1"

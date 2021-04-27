@@ -4,7 +4,7 @@
         display: flex;
         align-items: center;
         width: 100%;
-        background-color: transparent;
+        background-color: $light;
         text-align: left;
 
         .more-options{
@@ -30,7 +30,7 @@
 
     .inbox-content{
         overflow-y: auto;
-        height: 70vh;
+        height: 77vh;
 
         .text{
             display: flex;
@@ -42,27 +42,38 @@
             flex-direction: column;
 
             .text-content{
-                background-color: #f3f3f3;
                 border: $border;
                 padding: 12px;
                 max-width: 75%;
 
                 p{
-                    font-weight: lighter !important;
+                    font-weight: 500 !important;
                     margin-bottom: 0;
                 }
 
                 .date-time-left{
+                    // display: none;
                     font-size: .7em;
                     color: #aaa;
                     font-weight: 300 !important;
                 }
 
                 .date-time-right{
+                    // display: none;
                     font-size: .7em;
                     color: #ccc;
                     font-weight: 300 !important;
                 }
+            }
+    
+            .text-from{
+                border-radius: 20px 20px 20px 2px;
+                background-color: #677ae420;
+            }
+
+            .text-from-me{
+                border-radius: 20px 20px 2px 20px;
+                background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             }
 
             .text-content-missed-call{
@@ -86,14 +97,6 @@
                     opacity: 0.8;
                 }
             }
-    
-            .text-from{
-                border-radius: 20px 20px 20px 2px;
-            }
-
-            .text-from-me{
-                border-radius: 20px 20px 2px 20px;
-            }
         }
 
         .text-wrapper-left{
@@ -110,7 +113,7 @@
     position: relative;
 
     .message-content{
-        box-shadow: $shadow-neumorphism;
+        box-shadow: $shadow-sm;
         border-radius: $radius;
         background-color: transparent;
         display: flex;
@@ -120,10 +123,12 @@
         button{
             display: flex;
             align-items: center;
+            justify-content: center;
             border: none;
             outline: none;
             background-color: transparent;
-            padding: 10px;
+            width: 40px;
+            height: 40px;
 
             .feather{
                 width: 20px;
@@ -137,12 +142,13 @@
 
         .btn-message-plus,
         .btn-message-send{
-            background-color: #0061f211;
+            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 50%;
-        }
+            color: #fff;
 
-        .rotate-send{
-            transform: rotate(44deg);
+            &:hover{
+                color: #eee;
+            }
         }
 
         input{

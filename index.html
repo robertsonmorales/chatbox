@@ -38,6 +38,7 @@
 
     <link rel="stylesheet" href="src/plugins/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="src/plugins/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="src/sass/style.css">
 </head>
 <body>
@@ -48,25 +49,29 @@
                     <ul class="w-100">
                         <li>
                             <a href="#contacts" class="p-4 w-100">
-                                <i data-feather="users"></i>
+                                <!-- <i data-feather="users"></i> -->
+                                <i class="fas fa-user-friends fa-2x"></i>
                                 <span class="font-size-sm">Contacts</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#conversations" class="p-4 w-100">
-                                <i data-feather="message-square"></i>
-                                <span class="font-size-sm">Conversations</span>
+                            <a href="#conversations" class="p-4 w-100 active">
+                                <!-- <i data-feather="message-square"></i> -->
+                                <i class="fas fa-comment-alt fa-2x"></i>
+                                <span class="font-size-sm">Chats</span>
                             </a>
                         </li>
                         <li>
                             <a href="#calendar" class="p-4 w-100">
-                                <i data-feather="calendar"></i>
+                                <!-- <i data-feather="calendar"></i> -->
+                                <i class="fas fa-calendar-alt fa-2x"></i>
                                 <span class="font-size-sm">Events</span>
                             </a>
                         </li>
                         <li>
                             <a href="#settings" class="p-4 w-100">
-                                <i data-feather="settings"></i>
+                                <!-- <i data-feather="settings"></i> -->
+                                <i class="fas fa-cog fa-2x"></i>
                                 <span class="font-size-sm">Settings</span>
                             </a>
                         </li>
@@ -77,33 +82,33 @@
             <div class="col-3">
                 <div class="chats vh-100">
 
-                    <div class="create-new p-3">
-                        <button class="btn-create-new p-2"
+                    <div class="create-new  px-3 pb-2 pt-3">
+                        <button class="btn-create-new p-3"
                         type="button">
-                            <div class="add-icon p-2 mr-3">
-                                <i data-feather="plus"></i>
+                            <div class="add-icon">
+                                <!-- <i data-feather="plus"></i> -->
+                                <i class="fas fa-plus"></i>
                             </div>
                             <div class="add-text">Create New Conversation</div>
                         </button>
                     </div>
 
-                    <div class="text-header p-3">
-                        <!-- p-3 -->
-                        <h4 class="font-weight-bold">Conversations</h4>
-                        <span><i data-feather="more-horizontal"></i></span>
+                    <div class="text-header px-3 py-2">
+                        <h4 class="font-weight-bolder">Chats</h4>
+                        <!-- <span><i data-feather="more-horizontal"></i></span> -->
                     </div>
 
-                    <div class="search-name mx-3 mb-3 px-2">
+                    <div class="search-name mx-3 mb-2 px-3">
+                        <!-- <span><i data-feather="search"></i></span> -->
+                        <i class="fas fa-search"></i>
                         <input type="text" 
                         name="search-name" 
                         id="search-name"
                         class="search-input w-100"
                         placeholder="Search here...">
-
-                        <span class="pr-2"><i data-feather="search"></i></span>
                     </div>
                     <!-- THIS IS CHAT CONVERSATIONS -->
-                    <div class="chat-content" id="conversation-area"></div>
+                    <div class="chat-content px-3" id="conversation-area"></div>
                     <!-- ENDS HERE -->
                 </div>
             </div>
@@ -111,7 +116,8 @@
             <!-- CHAT CONTENT -->
             <div class="col-5 border-left border-right" id="chat-content-area">
                 <div class="inbox">
-                    <div class="inbox-header mx-3 mt-3 mb-5">
+
+                    <div class="inbox-header border-bottom p-3">
                         <div class="image-wrapper mr-2">
                             <img src="src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg"
                             alt="Aiony Haust"
@@ -120,17 +126,21 @@
                         </div>
                         <div class="persons-chat">
                             <span class="persons-name h5 mb-0">Aiony Haust</span>
+                            <span class="text font-size-sm">Active Now</span>
                         </div>
 
                         <div class="more-options">
                             <button class="btn-phone" title="Start a voice call">
-                                <i data-feather="phone"></i>
+                                <!-- <i data-feather="phone"></i> -->
+                                <i class="fas fa-phone-alt"></i>
                             </button>
                             <button class="btn-video ml-3" title="Start a video call">
-                                <i data-feather="video"></i>
+                                <!-- <i data-feather="video"></i> -->
+                                <i class="fas fa-video"></i>
                             </button>
                             <button class="btn-information ml-3">
-                                <i data-feather="info"></i>
+                                <!-- <i data-feather="info"></i> -->
+                                <i class="fas fa-info-circle"></i>
                             </button>
                         </div>
                     </div>
@@ -186,7 +196,7 @@
                                 <div class="text-content text-content-missed-call text-from mb-3">
                                     <span class="text-danger font-weight-bold">You missed a call from Aiony</span>
                                     <div class="text-danger font-size-sm mb-3">
-                                        <i data-feather="corner-down-left"></i>
+                                        <!-- <i data-feather="corner-down-left"></i> -->
                                         <span>Apr 22 at 8:01 PM</span>
                                     </div>
                                     <a href="#call-back" class="btn-call-back">CALL BACK</a>
@@ -223,31 +233,36 @@
                 <div class="message mx-3">
                     <div class="message-content">
                         <button type="button" 
-                        class="btn-message-plus ml-2">
-                            <i data-feather="plus"></i>
+                        class="btn-message-plus mx-2">
+                            <!-- <i data-feather="plus"></i> -->
+                            <i class="fas fa-plus"></i>
                         </button>
                         <button type="button" 
                         class="btn-message-image">
-                            <i data-feather="image"></i>
+                            <!-- <i data-feather="image"></i> -->
+                            <i class="fas fa-image"></i>
                         </button>
                         <button type="button"
                         class="btn-message-voice">
-                            <i data-feather="mic"></i>
+                            <!-- <i data-feather="mic"></i> -->
+                            <i class="fas fa-microphone"></i>
                         </button>
 
                         <input type="text"
                         name="message"
                         id="message"
-                        class="form-control my-2 mr-2 p-4"
+                        class="form-control my-1 mr-2 p-4"
                         placeholder="Type a message here...">
 
                         <button type="button"
                         class="btn-message-emoji">
-                            <i data-feather="smile"></i>
+                            <!-- <i data-feather="smile"></i> -->
+                            <i class="fas fa-smile"></i>
                         </button>
                         <button type="button"
-                        class="btn-message-send rotate-send mr-2">
-                            <i data-feather="send"></i>
+                        class="btn-message-send mr-2">
+                            <!-- <i data-feather="send"></i> -->
+                            <i class="fas fa-paper-plane"></i>
                         </button>
                     </div>
                 </div>
@@ -272,23 +287,35 @@
                     <div class="more-details mx-3">
                         <button tpye="button"
                         class="btn-media mb-2">
-                            <span class="ml-2"><i data-feather="image"></i></span>
+                            <span class="ml-2">
+                                <!-- <i data-feather="image"></i> -->
+                                <i class="fas fa-image"></i>
+                            </span>
                             <span>Photos & Videos</span>
                         </button>
                         <button tpye="button"
                         class="btn-search-coversation mb-2">
-                            <span class="ml-2"><i data-feather="search"></i></span>
+                            <span class="ml-2">
+                                <!-- <i data-feather="search"></i> -->
+                                <i class="fas fa-search"></i>
+                            </span>
                             <span>Search Conversation</span>
                         </button>
                         <button tpye="button"
                         class="btn-group mb-2">
-                            <span class="ml-2"><i data-feather="users"></i></span>
+                            <span class="ml-2">
+                                <!-- <i data-feather="users"></i> -->
+                                <i class="fas fa-user-friends"></i>
+                            </span>
                             <span>Create Group with Aiony Haust</span>
                         </button>
 
                         <button tpye="button"
                         class="btn-block mb-2">
-                            <span class="ml-2"><i data-feather="user-x"></i></span>
+                            <span class="ml-2">
+                                <!-- <i data-feather="user-x"></i> -->
+                                <i class="fas fa-user-times"></i>
+                            </span>
                             <span>Block</span>
                         </button>
                     </div>
@@ -308,7 +335,10 @@
                 <div class="modal-header">
                   <h5 class="modal-title" id="modal title">Block this person</h5>
                   <button type="button" class="close btn-cancel" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i data-feather="x"></i></span>
+                    <span aria-hidden="true">
+                        <!-- <i data-feather="x"></i> -->
+                        <i class="fas fa-times"></i>
+                    </span>
                   </button>
                 </div>
                 <div class="modal-body">
@@ -323,8 +353,8 @@
         </div>  
     </div>
 
-    <script src="src/plugins/feather-icons/dist/feather.min.js" defer></script>
     <script src="src/plugins/jquery/dist/jquery.min.js" defer></script>
+    <script src="src/plugins/@fortawesome/fontawesome-free/js/all.js" defer></script>  
     <script src="src/plugins/bootstrap/dist/js/bootstrap.min.js" defer></script>
     <script src="src/js/index.js" defer></script>
 
