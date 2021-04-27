@@ -1,5 +1,5 @@
 .chats{
-    // background-color: #fff;
+    background-color: $light;
     // box-shadow: $shadow-neumorphism;
     // border-top-right-radius: 1rem;
     // border-bottom-right-radius: 1rem;
@@ -19,19 +19,19 @@
             width: 100%;
             display: flex;
             align-items: center;
-            background-color: $light;
+            justify-content: center;
             font-weight: 600;
             font-size: 1em;
-            box-shadow: $shadow-neumorphism;
-            border-radius: $radius;
+            color: #fff;
+            box-shadow: $shadow-sm;
+            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            position: relative;
             transition: all .4s ease;
 
             .add-icon{
-                background-color: #0061f211;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                position: absolute;
+                left: .8rem;
 
                 .feather{
                     width: 20px;
@@ -40,7 +40,7 @@
             }
             
             &:active{
-                box-shadow: $shadow-unset;
+                box-shadow: none;
             }
         }
     }
@@ -50,7 +50,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #f3f3f3;
+        background-color: #fefefe;
+        box-shadow: $shadow-sm;
         transition: all .4s ease;
 
         .search-input {
@@ -66,14 +67,14 @@
         }
 
         &:focus-within{
-            background-color: #eee;
+            background-color: #fff;
         }
     }
 
     .chat-content{
         overflow-y: auto;
         overflow-x: hidden;
-        height: 65vh;
+        height: 70vh;
         
         .conversations{
             display: flex;
@@ -81,11 +82,24 @@
             border: none;
             outline: none;
             width: 100%;
-            background-color: transparent;
+            background-color: #fff;
             text-align: left;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            box-shadow: $shadow-sm;
+            transition: all .4s ease;
 
             &:hover{
-                background-color: unquote($primary + "11");
+                background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: #fff !important;
+
+                .text{
+                    color: #eee !important;
+                }
+
+                .datetime{
+                    color: #eee !important;
+                }
             }
         }
     }

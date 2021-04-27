@@ -1,5 +1,3 @@
-feather.replace();
-
 var convo = document.getElementById('convo');
 convo.scrollTo(0, convo.scrollHeight);
 
@@ -8,6 +6,9 @@ $(function(){
         // console.log(response);
 
         var html = '';
+
+        html += '<div class="mt-2"></div>';
+
         $.each(response, function(index, value){
             let conversation = value.conversations;
             let status = (conversation.status == 'unread') ? 'text-unread' : '';
@@ -17,7 +18,7 @@ $(function(){
                 let moreMember = conversation.member.length - 4;
                 // console.log(firstFour);
 
-                html += '<button type="button" class="conversations btn-convo btn-convo-'+ index +' py-2 px-3" id="'+ index +'" onclick="openConversation('+ index +')">';
+                html += '<button type="button" class="conversations btn-convo btn-convo-'+ index +' p-2" id="'+ index +'" onclick="openConversation('+ index +')">';
                     html += '<div class="image-wrapper image-wrapper-group mr-2">';
                         html += '<span>';
                             html += '<img src="'+ firstFour[0].profile_picture +'" alt="'+ firstFour[0].name +'" class="img-fluid-group">';
@@ -33,12 +34,12 @@ $(function(){
                         html += '<span class="persons-name">'+ conversation.group_name +'</span>';
                         html += '<span class="persons-text text-muted">';
                             html += '<span class="text text-truncate">Aiony Haust: text here</span>';
-                            html += '<span>10:32PM</span>';
+                            html += '<span class="datetime">'+ conversation.date_time +'</span>';
                         html += '</span>';
                     html += '</div>';
                 html += '</button>';
             }else{
-                html += '<button type="button" class="conversations btn-convo btn-convo-'+ index +' py-2 px-3" id="'+ index +'" onclick="openConversation('+ index +')">';
+                html += '<button type="button" class="conversations btn-convo btn-convo-'+ index +' p-2" id="'+ index +'" onclick="openConversation('+ index +')">';
                     html += '<div class="image-wrapper mr-2">';
                         html += '<img src="' + conversation.member.profile_picture + '" alt="' + conversation.member.name + '" class="img-fluid-cover">';
                         html += '<span class="person-status ' + conversation.member.account_status + '"></span>';
@@ -47,14 +48,16 @@ $(function(){
                         html += '<span class="persons-name">' + conversation.member.name + '</span>';
                         html += '<span class="persons-text text-muted '+ status +'">';
                             html += '<span class="text text-truncate">'+ conversation.text_from + ': ' + conversation.last_text +'</span>';
-                            html += '<span>'+ conversation.date_time +'</span>';
+                            html += '<span class="datetime">'+ conversation.date_time +'</span>';
                         html += '</span>';
                     html += '</div>';
                 html += '</button>';   
             }
-
-            $('#conversation-area').html(html);
         });
+
+        html += '<div class="mt-3"></div>';
+
+        $('#conversation-area').html(html);
 
         $('#search-name').on('keyup', function(){
             let searchName = $(this).val();
@@ -89,6 +92,11 @@ $(function(){
 
             // show results
             if(searchResults.length != 0){
+                $('#conversation-area').removeClass('text-center');
+                $('#conversation-area').removeClass('mt-5');
+
+                search_html += '<div class="mt-2"></div>';
+
                 $.each(searchResults, function(index, value){
                     
                     let conversation = value.conversations;
@@ -99,7 +107,7 @@ $(function(){
                         let moreMember = conversation.member.length - 4;
                         // console.log(firstFour);
 
-                        search_html += '<button type="button" class="conversations btn-convo btn-convo-'+ index +' py-2 px-3" id="'+ index +'" onclick="openConversation('+ index +')">';
+                        search_html += '<button type="button" class="animate__animated animate_fadeIn conversations btn-convo btn-convo-'+ index +' p-2" id="'+ index +'" onclick="openConversation('+ index +')">';
                             search_html += '<div class="image-wrapper image-wrapper-group mr-2">';
                                 search_html += '<span>';
                                     search_html += '<img src="'+ firstFour[0].profile_picture +'" alt="'+ firstFour[0].name +'" class="img-fluid-group">';
@@ -115,12 +123,12 @@ $(function(){
                                 search_html += '<span class="persons-name">'+ conversation.group_name +'</span>';
                                 search_html += '<span class="persons-text text-muted">';
                                     search_html += '<span class="text text-truncate">Aiony Haust: text here</span>';
-                                    search_html += '<span>10:32PM</span>';
+                                    search_html += '<span class="datetime">'+ conversation.date_time +'</span>';
                                 search_html += '</span>';
                             search_html += '</div>';
                         search_html += '</button>';
                     }else{
-                        search_html += '<button type="button" class="conversations btn-convo btn-convo-'+ index +' py-2 px-3" id="'+ index +'" onclick="openConversation('+ index +')">';
+                        search_html += '<button type="button" class="animate__animated animate_fadeIn conversations btn-convo btn-convo-'+ index +' p-2" id="'+ index +'" onclick="openConversation('+ index +')">';
                             search_html += '<div class="image-wrapper mr-2">';
                                 search_html += '<img src="' + conversation.member.profile_picture + '" alt="' + conversation.member.name + '" class="img-fluid-cover">';
                                 search_html += '<span class="person-status ' + conversation.member.account_status + '"></span>';
@@ -129,14 +137,16 @@ $(function(){
                                 search_html += '<span class="persons-name">' + conversation.member.name + '</span>';
                                 search_html += '<span class="persons-text text-muted '+ status +'">';
                                     search_html += '<span class="text text-truncate">'+ conversation.text_from + ': ' + conversation.last_text +'</span>';
-                                    search_html += '<span>'+ conversation.date_time +'</span>';
+                                    search_html += '<span class="datetime">'+ conversation.date_time +'</span>';
                                 search_html += '</span>';
                             search_html += '</div>';
                         search_html += '</button>';   
                     }
-
-                    $('#conversation-area').html(search_html);
                 });
+
+                search_html += '<div class="mt-3"></div>';
+
+                $('#conversation-area').html(search_html);
             }else{
                 // let noResultFound = '<div>No conversation found...</div>';
                 // $('#conversation-area').empty();
