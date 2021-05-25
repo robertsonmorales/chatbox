@@ -16,11 +16,8 @@ body{
     font-family: $font-family !important;
     line-height: $line-height-base !important;
     font-size: $font-size-base !important;
-    color: $dark !important;
-    background-color: #fff; // $body-bg !important;
-    // background-image: $body-image;
-    // background-attachment: fixed;
-    // background-size: cover;
+    color: $light !important;
+    background-color: $body-bg !important;
 }
 
 @import 'global-classes';
@@ -36,22 +33,22 @@ body{
 
 /* width */
 ::-webkit-scrollbar {
-    width: 5px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background-color: #ddd;
-    border-radius: 10px;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background-color: #bbb;
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #0061f211;
-  }
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: $secondary;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: $reserve;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: unqoute($reserve + 'aa');
+}

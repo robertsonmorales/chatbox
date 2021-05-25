@@ -25,7 +25,7 @@
     <!-- ends here -->
 
     <!-- scripts -->
-    <link rel="preload" href="src/plugins/feather-icons/dist/feather.min.js" as="script">    
+    <!-- <link rel="preload" href="src/plugins/feather-icons/dist/feather.min.js" as="script">     -->
     <link rel="preload" href="src/plugins/jquery/dist/jquery.min.js" as="script">    
     <link rel="preload" href="src/plugins/bootstrap/dist/js/bootstrap.min.js" as="script">    
     <link rel="preload" href="src/js/index.js" as="script">    
@@ -43,64 +43,64 @@
 </head>
 <body>
     <div class="container-fluid p-0" id="app">
+
         <div class="row no-gutters">
-            <div class="col-1 bg-primary">
-                <div class="sidebar vh-100">
+
+            <div class="col-0">
+                <div class="sidebar vh-100 py-2 text-center">
+                    <!-- <a href="/" class="text-light fa-3x w-100">
+                        <i class="fas fa-user-circle"></i>
+                    </a> -->
+
                     <ul class="w-100">
-                        <li>
-                            <a href="#contacts" class="p-4 w-100">
-                                <!-- <i data-feather="users"></i> -->
-                                <i class="fas fa-user-friends fa-2x"></i>
-                                <span class="font-size-sm">Contacts</span>
+                        <li class="mb-2">
+                            <a href="#conversations" class="text-muted active">
+                                <i class="fas fa-comment-alt fa-lg"></i>
+                                <!-- <span class="font-size-sm">Chats</span> -->
                             </a>
                         </li>
-                        <li>
-                            <a href="#conversations" class="p-4 w-100 active">
-                                <!-- <i data-feather="message-square"></i> -->
-                                <i class="fas fa-comment-alt fa-2x"></i>
-                                <span class="font-size-sm">Chats</span>
+                        <li class="mb-2">
+                            <a href="#contacts" class="text-muted">
+                                <i class="fas fa-user-friends fa-lg"></i>
+                                <!-- <span class="font-size-sm">Contacts</span> -->
                             </a>
                         </li>
-                        <li>
-                            <a href="#calendar" class="p-4 w-100">
-                                <!-- <i data-feather="calendar"></i> -->
-                                <i class="fas fa-calendar-alt fa-2x"></i>
-                                <span class="font-size-sm">Events</span>
+                        <li class="mb-2">
+                            <a href="#calendar" class="text-muted">
+                                <i class="fas fa-calendar-alt fa-lg"></i>
+                                <!-- <span class="font-size-sm">Events</span> -->
                             </a>
                         </li>
-                        <li>
-                            <a href="#settings" class="p-4 w-100">
-                                <!-- <i data-feather="settings"></i> -->
-                                <i class="fas fa-cog fa-2x"></i>
-                                <span class="font-size-sm">Settings</span>
+                        <li class="mb-2">
+                            <a href="#settings" class="text-muted">
+                                <i class="fas fa-cog fa-lg"></i>
+                                <!-- <span class="font-size-sm">Settings</span> -->
                             </a>
                         </li>
                     </ul>
+
+                    <!-- <div class="w-100"></div> -->
                 </div>
             </div>
 
             <div class="col-3">
                 <div class="chats vh-100">
 
-                    <div class="create-new  px-3 pb-2 pt-3">
-                        <button class="btn-create-new p-3"
-                        type="button">
-                            <div class="add-icon">
-                                <!-- <i data-feather="plus"></i> -->
-                                <i class="fas fa-plus"></i>
-                            </div>
-                            <div class="add-text">Create New Conversation</div>
-                        </button>
-                    </div>
+                    <div class="text-header p-3">
+                        <h4 class="font-weight-bolder mb-0">Chats</h4>
 
-                    <div class="text-header px-3 py-2">
-                        <h4 class="font-weight-bolder">Chats</h4>
-                        <!-- <span><i data-feather="more-horizontal"></i></span> -->
+                        <button class="btn-create-new"
+                            type="button">
+                            <div class="add-icon">
+                                <i class="fas fa-plus fa-lg"></i>
+                            </div>
+                        </button>
                     </div>
 
                     <div class="search-name mx-3 mb-2 px-3">
                         <!-- <span><i data-feather="search"></i></span> -->
-                        <i class="fas fa-search"></i>
+                        <span class="search-icon"><i class="fas fa-search"></i></span>
+
                         <input type="text" 
                         name="search-name" 
                         id="search-name"
@@ -114,10 +114,10 @@
             </div>
 
             <!-- CHAT CONTENT -->
-            <div class="col-5 border-left border-right" id="chat-content-area">
+            <div class="col border-left border-right" id="chat-content-area">
                 <div class="inbox">
 
-                    <div class="inbox-header border-bottom p-3">
+                    <div class="inbox-header p-3 border-bottom">
                         <div class="image-wrapper mr-2">
                             <img src="src/images/aiony-haust-3TLl_97HNJo-unsplash.jpg"
                             alt="Aiony Haust"
@@ -129,7 +129,7 @@
                             <span class="text font-size-sm">Active Now</span>
                         </div>
 
-                        <div class="more-options">
+                        <div class="more-options fa-lg">
                             <button class="btn-phone" title="Start a voice call">
                                 <!-- <i data-feather="phone"></i> -->
                                 <i class="fas fa-phone-alt"></i>
@@ -167,18 +167,13 @@
                         <div class="text text-right flex-row-reverse">
                             <div class="text-wrapper text-wrapper-right">
                                 <div class="text-content text-from-me mb-3 bg-primary">
-                                    <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius doloremque beatae harum laudantium incidunt quaerat laboriosam, molestias error exercitationem est.</p>
+                                    <p class="text-white">Hi !!</p>
                                     <span class="date-time-right">4:30PM</span>
                                 </div>
 
                                 <div class="text-content text-from-me mb-3 bg-primary">
-                                    <p class="text-white">Lorem ipsum dolor sit amet.</p>
+                                    <p class="text-white">What are u doin?</p>
                                     <span class="date-time-right">4:32PM</span>
-                                </div>
-
-                                <div class="text-content text-from-me mb-3 bg-primary">
-                                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos magni eum beatae soluta assumenda nobis.</p>
-                                    <span class="date-time-right">5:32PM</span>
                                 </div>
                             </div>
                         </div>
@@ -214,7 +209,7 @@
                                     <span class="date-time-left">9:32PM</span>
                                 </div>
 
-                                <div class="text-content text-content-is-img text-from mb-3">
+                                <!-- <div class="text-content text-content-is-img text-from mb-3">
                                     <a href="src/images/austin-wade-X6Uj51n5CE8-unsplash.jpg"
                                         target="_blank"
                                         rel="noopener">
@@ -223,7 +218,7 @@
                                         alt="Aiony Haust">
                                     </a>
                                     <span class="date-time-left">9:32PM</span>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <!-- ends here -->
@@ -231,7 +226,7 @@
                     </div>
                 </div>
                 <div class="message mx-3">
-                    <div class="message-content">
+                    <div class="message-content fa-lg">
                         <button type="button" 
                         class="btn-message-plus mx-2">
                             <!-- <i data-feather="plus"></i> -->
@@ -287,7 +282,7 @@
                     <div class="more-details mx-3">
                         <button tpye="button"
                         class="btn-media mb-2">
-                            <span class="ml-2">
+                            <span class="ml-2 fa-lg">
                                 <!-- <i data-feather="image"></i> -->
                                 <i class="fas fa-image"></i>
                             </span>
@@ -295,7 +290,7 @@
                         </button>
                         <button tpye="button"
                         class="btn-search-coversation mb-2">
-                            <span class="ml-2">
+                            <span class="ml-2 fa-lg">
                                 <!-- <i data-feather="search"></i> -->
                                 <i class="fas fa-search"></i>
                             </span>
@@ -303,7 +298,7 @@
                         </button>
                         <button tpye="button"
                         class="btn-group mb-2">
-                            <span class="ml-2">
+                            <span class="ml-2 fa-lg">
                                 <!-- <i data-feather="users"></i> -->
                                 <i class="fas fa-user-friends"></i>
                             </span>
@@ -312,7 +307,7 @@
 
                         <button tpye="button"
                         class="btn-block mb-2">
-                            <span class="ml-2">
+                            <span class="ml-2 fa-lg">
                                 <!-- <i data-feather="user-x"></i> -->
                                 <i class="fas fa-user-times"></i>
                             </span>
@@ -322,41 +317,41 @@
                 </div>
             </div>
             <!-- ENDS HERE -->
-        </div>
 
-        <div class="modal fade" 
-            id="modal" 
-            tabindex="-1" 
-            role="dialog" 
-            aria-labelledby="modal" 
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered animate__animated animate__fadeInDown animate_faster" role="document">
-              <div class="modal-content overflow-hidden">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="modal title">Block this person</h5>
-                  <button type="button" class="close btn-cancel" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">
-                        <!-- <i data-feather="x"></i> -->
-                        <i class="fas fa-times"></i>
-                    </span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <span>This conversation will stay in chats unless you delete it.</span>
-                </div>
-                <div class="modal-footer border-0 bg-light">
-                  <button type="button" class="btn text-primary btn-cancel" data-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-primary">Block</button>
-                </div>
-              </div>
-            </div>
         </div>  
     </div>
 
+    <div class="modal fade" 
+        id="modal" 
+        tabindex="-1" 
+        role="dialog" 
+        aria-labelledby="modal" 
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered animate__animated animate__fadeInDown animate_faster" role="document">
+            <div class="modal-content overflow-hidden">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-dark" id="modal title">Block this person</h5>
+                    <button type="button" class="close btn-cancel" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                        <i class="fas fa-times"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body text-dark">
+                    <span>This conversation will stay in chats unless you delete it.</span>
+                </div>
+                <div class="modal-footer bg-light border-0">
+                    <button type="button" class="btn text-primary btn-cancel" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Block</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="src/plugins/@fortawesome/fontawesome-free/js/all.js" defer></script> 
     <script src="src/plugins/jquery/dist/jquery.min.js" defer></script>
-    <script src="src/plugins/@fortawesome/fontawesome-free/js/all.js" defer></script>  
     <script src="src/plugins/bootstrap/dist/js/bootstrap.min.js" defer></script>
     <script src="src/js/index.js" defer></script>
-
 </body>
 </html>

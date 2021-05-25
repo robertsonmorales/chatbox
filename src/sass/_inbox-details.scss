@@ -24,20 +24,14 @@
             border: none;
             outline: none;
             padding: 12px 15px;
-            border-radius: $radius;
+            border-radius: 10px;
+            font-weight: 500 !important;
             background-color: transparent;
-
-            .feather{
-                width: 20px;
-                height: 20px;
-            }
+            color: $light;
 
             &:hover{
-                box-shadow: $shadow-neumorphism;
-            }
-
-            &:active{
-                box-shadow: $shadow-unset;
+                background-color: $secondary;
+                box-shadow: $shadow-sm;
             }
         }
     }
