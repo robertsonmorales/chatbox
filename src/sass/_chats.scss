@@ -1,5 +1,4 @@
 .chats{
-    background-color: $light;
     // box-shadow: $shadow-neumorphism;
     // border-top-right-radius: 1rem;
     // border-bottom-right-radius: 1rem;
@@ -8,15 +7,16 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }
 
-    .create-new{
-        // display: none;
+        h4{
+            color: $light;
+        }
 
         .btn-create-new{
+            width: 42px;
+            height: 42px;
             border: none;
             outline: none;
-            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -24,21 +24,16 @@
             font-size: 1em;
             color: #fff;
             box-shadow: $shadow-sm;
-            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 10px;
-            position: relative;
+            background-color: $primary;
+            border-radius: 50%;
             transition: all .4s ease;
-
-            .add-icon{
-                position: absolute;
-                left: .8rem;
-
-                .feather{
-                    width: 20px;
-                    height: 20px;
-                }
-            }
             
+            .add-icon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
             &:active{
                 box-shadow: none;
             }
@@ -50,56 +45,46 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #fefefe;
-        box-shadow: $shadow-sm;
+        background-color: $secondary;
         transition: all .4s ease;
 
+        .search-icon{
+            color: $reserve;
+        }
+
         .search-input {
+            color: $light;
             padding: 12px;
             background-color: transparent;
             border: none;
             outline: none;
         }
 
-        .feather{
-            width: 20px;
-            height: 20px;
-        }
-
         &:focus-within{
-            background-color: #fff;
+            background-color: $reserve;
         }
     }
 
     .chat-content{
         overflow-y: auto;
         overflow-x: hidden;
-        height: 70vh;
+        height: 78vh;
         
-        .conversations{
+        button.conversations{
             display: flex;
             align-items: center;
             border: none;
             outline: none;
-            width: 100%;
-            background-color: #fff;
+            width: 100%;           
+            background-color: transparent; 
             text-align: left;
-            border-radius: 10px;
             margin-bottom: 5px;
-            box-shadow: $shadow-sm;
+            border-radius: 10px;
             transition: all .4s ease;
 
             &:hover{
-                background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                color: #fff !important;
-
-                .text{
-                    color: #eee !important;
-                }
-
-                .datetime{
-                    color: #eee !important;
-                }
+                box-shadow: $shadow-sm;
+                background-color: $secondary;
             }
         }
     }

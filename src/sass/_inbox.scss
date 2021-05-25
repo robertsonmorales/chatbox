@@ -3,8 +3,7 @@
     .inbox-header{
         display: flex;
         align-items: center;
-        width: 100%;
-        background-color: $light;
+        width: 100%;        
         text-align: left;
 
         .more-options{
@@ -15,11 +14,7 @@
                 border: none;
                 outline: none;
                 background-color: transparent;
-
-                .feather{
-                    width: 20px;
-                    height: 20px;
-                }
+                color: $light;
 
                 &:hover{
                     color: $primary;
@@ -42,24 +37,23 @@
             flex-direction: column;
 
             .text-content{
-                border: $border;
                 padding: 12px;
-                max-width: 75%;
 
                 p{
                     font-weight: 500 !important;
                     margin-bottom: 0;
+                    color: $light;
                 }
 
                 .date-time-left{
-                    // display: none;
+                    display: none;
                     font-size: .7em;
                     color: #aaa;
                     font-weight: 300 !important;
                 }
 
                 .date-time-right{
-                    // display: none;
+                    display: none;
                     font-size: .7em;
                     color: #ccc;
                     font-weight: 300 !important;
@@ -67,22 +61,18 @@
             }
     
             .text-from{
+                max-width: 60%;
                 border-radius: 20px 20px 20px 2px;
-                background-color: #677ae420;
+                background-color: $reserve-2;
             }
 
             .text-from-me{
+                max-width: 80%;
                 border-radius: 20px 20px 2px 20px;
-                background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background-color: $primary;
             }
 
             .text-content-missed-call{
-                .feather{
-                    transform: rotate(45deg);
-                    width: 16px;
-                    height: 16px;
-                }
-
                 .btn-call-back{
                     text-decoration: none;
                     color: $primary;
@@ -90,6 +80,7 @@
             }
 
             .text-content-is-img{
+                padding: 0 !important;
                 max-width: 50% !important;
                 transition: all .4s ease;
 
@@ -114,8 +105,8 @@
 
     .message-content{
         box-shadow: $shadow-sm;
-        border-radius: $radius;
-        background-color: transparent;
+        border-radius: 10px;
+        background-color: $secondary;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -127,13 +118,9 @@
             border: none;
             outline: none;
             background-color: transparent;
+            color: $light;
             width: 40px;
             height: 40px;
-
-            .feather{
-                width: 20px;
-                height: 20px;
-            }
 
             &:hover{
                 color: $primary;
@@ -142,12 +129,17 @@
 
         .btn-message-plus,
         .btn-message-send{
-            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-color: $primary;
             border-radius: 50%;
-            color: #fff;
+            color: $light;
+            box-shadow: $shadow-sm;
 
             &:hover{
-                color: #eee;
+                color: #fff;
+            }
+
+            &:active{
+                box-shadow: none;
             }
         }
 
@@ -155,13 +147,13 @@
             outline: none;
             border: none;
             padding: 12px;
-            background-color: $light;
+            background-color: transparent;
             flex: 1;
-            border-radius: 20px;
-        }
+            border-radius: 10px;
 
-        &:focus-within{
-            background-color: #fdfdfd;
+            &:focus{
+                box-shadow: 0 0 0 0.2rem unquote($primary + '40') !important;
+            }
         }
     }
 }

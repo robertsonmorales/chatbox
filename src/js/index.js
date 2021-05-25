@@ -1,3 +1,11 @@
+// import Sidebar from 'components/Sidebar.vue';
+
+// Vue.component('sidebar', Sidebar);
+
+// var app = new Vue({
+//     el: '#app'
+// });
+
 var convo = document.getElementById('convo');
 convo.scrollTo(0, convo.scrollHeight);
 
@@ -33,7 +41,7 @@ $(function(){
                     html += '<div class="persons-chat w-100">';
                         html += '<span class="persons-name">'+ conversation.group_name +'</span>';
                         html += '<span class="persons-text text-muted">';
-                            html += '<span class="text text-truncate">Aiony Haust: text here</span>';
+                            html += '<span class="text text-truncate">'+ conversation.text_from +': '+ conversation.last_text +'</span>';
                             html += '<span class="datetime">'+ conversation.date_time +'</span>';
                         html += '</span>';
                     html += '</div>';
@@ -177,9 +185,6 @@ $(function(){
     $('.btn-information').on('click', function(){
         $('#more-option-area').toggleClass('col-3');
         $('#more-option-area').toggleClass('d-none');
-
-        $('#chat-content-area').toggleClass('col-5');
-        $('#chat-content-area').toggleClass('col-8');
     });
 
     $('.btn-block').on('click', function(){

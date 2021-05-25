@@ -12,11 +12,11 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Roboto", "Montserrat", sans-serif !important;
   line-height: 1.6 !important;
   font-size: 0.9rem !important;
-  color: #3e4044 !important;
-  background-color: #fff;
+  color: #f8f9fa !important;
+  background-color: #1a1926 !important;
 }
 
 .image-wrapper {
@@ -44,13 +44,13 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-  background-color: #fff;
-  padding: 3px;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 .image-wrapper .img-fluid-cover-child {
-  width: 32px !important;
-  height: 32px !important;
+  width: 24px !important;
+  height: 24px !important;
 }
 
 .image-wrapper .img-fluid-main {
@@ -69,11 +69,13 @@ body {
 
 .image-wrapper .person-status {
   padding: 4px;
-  border: 3px solid #fff;
+  border: 1px solid #f8f9fa;
   border-radius: 50%;
   position: absolute;
   bottom: 0;
-  right: 0px;
+  right: 5px;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 .image-wrapper .active {
@@ -99,8 +101,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 21px;
-  height: 21px;
+  width: 22.5px;
+  height: 22.5px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
@@ -129,6 +131,7 @@ body {
 
 .persons-chat .persons-name {
   font-weight: 600;
+  color: #f8f9fa;
 }
 
 .persons-chat .persons-text {
@@ -148,6 +151,7 @@ body {
   width: 180px;
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
+  font-weight: 500;
 }
 
 .persons-chat .persons-text .datetime {
@@ -157,7 +161,7 @@ body {
 
 .persons-chat .text-unread {
   font-weight: 600 !important;
-  color: #3e4044 !important;
+  color: #f8f9fa !important;
 }
 
 .font-size-sm {
@@ -165,33 +169,45 @@ body {
 }
 
 .font-weight-bolder {
-  font-weight: 800 !important;
+  font-weight: 700 !important;
 }
 
 .rounded {
-  border-radius: 20px !important;
+  border-radius: 10px !important;
 }
 
 .bg-primary,
 .btn-primary {
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: #7744ec !important;
 }
 
 .btn:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-          box-shadow: 0 0 0 0.2rem linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-}
-
-.btn-primary {
-  border-color: #20c997 !important;
+  -webkit-box-shadow: 0 0 0 0.2rem #7744ec40 !important;
+          box-shadow: 0 0 0 0.2rem #7744ec40 !important;
 }
 
 .text-primary {
-  color: #2155bf !important;
+  color: #7744ec !important;
 }
 
 button {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Roboto", "Montserrat", sans-serif !important;
+}
+
+.border {
+  border-top: 1px solid #3d3d53 !important;
+}
+
+.border-right {
+  border-right: 1px solid #3d3d53 !important;
+}
+
+.border-left {
+  border-left: 1px solid #3d3d53 !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #3d3d53 !important;
 }
 
 .modal {
@@ -202,7 +218,7 @@ button {
   -webkit-box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.2);
           box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.2);
   border: 0.0625rem solid rgba(231, 234, 243, 0.7) !important;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .sidebar {
@@ -219,6 +235,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #1d1d2a;
 }
 
 .sidebar ul {
@@ -249,22 +266,20 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #f8f9fa !important;
-  border-left: 5px solid transparent;
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
+  padding: 20px;
+  border-left: 5px solid transparent;
 }
 
 .sidebar ul li a:hover {
-  border-left: 5px solid #f8f9fa;
+  color: #7744ec !important;
+  border-left: 5px solid #7744ec;
 }
 
 .sidebar ul li .active {
-  border-left: 5px solid #f8f9fa !important;
-}
-
-.chats {
-  background-color: #f8f9fa;
+  color: #7744ec !important;
+  border-left: 5px solid #7744ec;
 }
 
 .chats .text-header {
@@ -279,10 +294,15 @@ button {
           justify-content: space-between;
 }
 
-.chats .create-new .btn-create-new {
+.chats .text-header h4 {
+  color: #f8f9fa;
+}
+
+.chats .text-header .btn-create-new {
+  width: 42px;
+  height: 42px;
   border: none;
   outline: none;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,24 +317,25 @@ button {
   color: #fff;
   -webkit-box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.2);
           box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.2);
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 10px;
-  position: relative;
+  background-color: #7744ec;
+  border-radius: 50%;
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
 }
 
-.chats .create-new .btn-create-new .add-icon {
-  position: absolute;
-  left: .8rem;
+.chats .text-header .btn-create-new .add-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.chats .create-new .btn-create-new .add-icon .feather {
-  width: 20px;
-  height: 20px;
-}
-
-.chats .create-new .btn-create-new:active {
+.chats .text-header .btn-create-new:active {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -330,36 +351,34 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #fefefe;
-  -webkit-box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.2);
+  background-color: #1d1d2a;
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
 }
 
+.chats .search-name .search-icon {
+  color: #3d3d53;
+}
+
 .chats .search-name .search-input {
+  color: #f8f9fa;
   padding: 12px;
   background-color: transparent;
   border: none;
   outline: none;
 }
 
-.chats .search-name .feather {
-  width: 20px;
-  height: 20px;
-}
-
 .chats .search-name:focus-within {
-  background-color: #fff;
+  background-color: #3d3d53;
 }
 
 .chats .chat-content {
   overflow-y: auto;
   overflow-x: hidden;
-  height: 70vh;
+  height: 78vh;
 }
 
-.chats .chat-content .conversations {
+.chats .chat-content button.conversations {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -369,27 +388,18 @@ button {
   border: none;
   outline: none;
   width: 100%;
-  background-color: #fff;
+  background-color: transparent;
   text-align: left;
-  border-radius: 10px;
   margin-bottom: 5px;
-  -webkit-box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
 }
 
-.chats .chat-content .conversations:hover {
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #fff !important;
-}
-
-.chats .chat-content .conversations:hover .text {
-  color: #eee !important;
-}
-
-.chats .chat-content .conversations:hover .datetime {
-  color: #eee !important;
+.chats .chat-content button.conversations:hover {
+  -webkit-box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.2);
+  background-color: #1d1d2a;
 }
 
 .inbox .inbox-header {
@@ -400,7 +410,6 @@ button {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  background-color: #f8f9fa;
   text-align: left;
 }
 
@@ -413,15 +422,11 @@ button {
   border: none;
   outline: none;
   background-color: transparent;
-}
-
-.inbox .inbox-header .more-options button .feather {
-  width: 20px;
-  height: 20px;
+  color: #f8f9fa;
 }
 
 .inbox .inbox-header .more-options button:hover {
-  color: #2155bf;
+  color: #7744ec;
 }
 
 .inbox .inbox-content {
@@ -449,51 +454,48 @@ button {
 }
 
 .inbox .inbox-content .text-wrapper .text-content {
-  border: 0.0625rem solid rgba(231, 234, 243, 0.7);
   padding: 12px;
-  max-width: 75%;
 }
 
 .inbox .inbox-content .text-wrapper .text-content p {
   font-weight: 500 !important;
   margin-bottom: 0;
+  color: #f8f9fa;
 }
 
 .inbox .inbox-content .text-wrapper .text-content .date-time-left {
+  display: none;
   font-size: .7em;
   color: #aaa;
   font-weight: 300 !important;
 }
 
 .inbox .inbox-content .text-wrapper .text-content .date-time-right {
+  display: none;
   font-size: .7em;
   color: #ccc;
   font-weight: 300 !important;
 }
 
 .inbox .inbox-content .text-wrapper .text-from {
+  max-width: 60%;
   border-radius: 20px 20px 20px 2px;
-  background-color: #677ae420;
+  background-color: #242434;
 }
 
 .inbox .inbox-content .text-wrapper .text-from-me {
+  max-width: 80%;
   border-radius: 20px 20px 2px 20px;
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.inbox .inbox-content .text-wrapper .text-content-missed-call .feather {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  width: 16px;
-  height: 16px;
+  background-color: #7744ec;
 }
 
 .inbox .inbox-content .text-wrapper .text-content-missed-call .btn-call-back {
   text-decoration: none;
-  color: #2155bf;
+  color: #7744ec;
 }
 
 .inbox .inbox-content .text-wrapper .text-content-is-img {
+  padding: 0 !important;
   max-width: 50% !important;
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
@@ -522,8 +524,8 @@ button {
 .message .message-content {
   -webkit-box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.2);
           box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 2rem;
-  background-color: transparent;
+  border-radius: 10px;
+  background-color: #1d1d2a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -548,44 +550,49 @@ button {
   border: none;
   outline: none;
   background-color: transparent;
+  color: #f8f9fa;
   width: 40px;
   height: 40px;
 }
 
-.message .message-content button .feather {
-  width: 20px;
-  height: 20px;
-}
-
 .message .message-content button:hover {
-  color: #2155bf;
+  color: #7744ec;
 }
 
 .message .message-content .btn-message-plus,
 .message .message-content .btn-message-send {
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: #7744ec;
   border-radius: 50%;
-  color: #fff;
+  color: #f8f9fa;
+  -webkit-box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 .message .message-content .btn-message-plus:hover,
 .message .message-content .btn-message-send:hover {
-  color: #eee;
+  color: #fff;
+}
+
+.message .message-content .btn-message-plus:active,
+.message .message-content .btn-message-send:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .message .message-content input {
   outline: none;
   border: none;
   padding: 12px;
-  background-color: #f8f9fa;
+  background-color: transparent;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
-.message .message-content:focus-within {
-  background-color: #fdfdfd;
+.message .message-content input:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem #7744ec40 !important;
+          box-shadow: 0 0 0 0.2rem #7744ec40 !important;
 }
 
 .conversation-info .avatar {
@@ -635,23 +642,16 @@ button {
   border: none;
   outline: none;
   padding: 12px 15px;
-  border-radius: 2rem;
+  border-radius: 10px;
+  font-weight: 500 !important;
   background-color: transparent;
-}
-
-.conversation-info .more-details button .feather {
-  width: 20px;
-  height: 20px;
+  color: #f8f9fa;
 }
 
 .conversation-info .more-details button:hover {
-  -webkit-box-shadow: 11px 11px 22px #e4e6e8, -11px -11px 22px #ffffff;
-          box-shadow: 11px 11px 22px #e4e6e8, -11px -11px 22px #ffffff;
-}
-
-.conversation-info .more-details button:active {
-  -webkit-box-shadow: inset 11px 11px 22px #e4e6e8, inset -11px -11px 22px #ffffff;
-          box-shadow: inset 11px 11px 22px #e4e6e8, inset -11px -11px 22px #ffffff;
+  background-color: #1d1d2a;
+  -webkit-box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* width */
@@ -661,18 +661,18 @@ button {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background-color: #ddd;
+  background-color: #1d1d2a;
   border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color: #bbb;
+  background-color: #3d3d53;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #0061f211;
+  background: unqoute("#3d3d53aa");
 }
 /*# sourceMappingURL=style.css.map */

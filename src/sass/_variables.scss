@@ -1,29 +1,29 @@
-$body-bg: #f8fafc; // #efefef;
+$body-bg: #1a1926; // #efefef;
 
 // shadow
 $shadow-sm: -1px 1px 10px rgba(0,0,0,0.2);
 $shadow-md: 0 6px 12px rgba(140,152,164,.075);
 $shadow-lg: 0 10px 40px 10px rgba(140,152,164,.175);
-$shadow-neumorphism: 11px 11px 22px #e4e6e8,
-    -11px -11px 22px #ffffff;
-$shadow-unset: inset 11px 11px 22px #e4e6e8,
-    inset -11px -11px 22px #ffffff;
 
 // border
 $border: .0625rem solid rgba(231,234,243,.7);
 $radius: 2rem;
 
 // font
-$font-family: 'Roboto', sans-serif;
+$font-family: 'Roboto', 'Montserrat', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 // color scheme
-$primary: #2155bf;
-$secondary: #3f51b5;
+$primary: #7744ec;
+
+$secondary: #1d1d2a;
 $light: #f8f9fa;
 $success: #20c997;
 $warning: #ff9800;
 $info: #03a9f4;
 $danger: #dc3545;
-$dark: #3e4044;
+$dark: #1a1926;
+
+$reserve: #3d3d53;
+$reserve-2: #242434;

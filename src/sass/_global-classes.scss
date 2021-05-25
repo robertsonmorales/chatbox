@@ -11,13 +11,12 @@
         height: 45px;
         object-fit: cover;
         border-radius: 50%;
-        background-color: #fff;
-        padding: 3px;
+        transition: all .4s ease;
     }
 
     .img-fluid-cover-child{
-        width: 32px !important;
-        height: 32px !important;
+        width: 24px !important;
+        height: 24px !important;
     }
 
     .img-fluid-main{
@@ -31,11 +30,12 @@
 
     .person-status{
         padding: 4px;
-        border: 3px solid #fff;
+        border: 1px solid $light;
         border-radius: 50%;
         position: absolute;
         bottom: 0;
-        right: 0px;
+        right: 5px;
+        transition: all .4s ease;
     }
 
     .active{
@@ -57,8 +57,8 @@
     .img-fluid-group{
         display: flex;
         align-items: center;
-        width: 21px;
-        height: 21px;
+        width: 22.5px;
+        height: 22.5px;
         object-fit: cover;
         border-radius: 50%;
     }
@@ -81,6 +81,7 @@
 
     .persons-name{
         font-weight: 600;
+        color: $light;
     }
 
     .persons-text{
@@ -92,6 +93,7 @@
         .text{
             width: 180px;
             transition: all .4s ease;
+            font-weight: 500;
         }
 
         .datetime{
@@ -101,7 +103,7 @@
 
     .text-unread{
         font-weight: 600 !important;
-        color: $dark !important;
+        color: $light !important;
     }
 }
 
@@ -110,25 +112,22 @@
 }
 
 .font-weight-bolder{
-    font-weight: 800 !important;
+    font-weight: 700 !important;
 }
 
 .rounded{
-    border-radius: 20px !important;
+    border-radius: 10px !important;
 }
 
-.bg-primary,
+.bg-primary, 
 .btn-primary{
-    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-color: $primary !important;
 }
 
 .btn{
     &:focus{
-        box-shadow: 0 0 0 0.2rem linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        box-shadow: 0 0 0 0.2rem unquote($primary + '40') !important;
     }
-}
-.btn-primary{
-    border-color: $success !important;
 }
 
 .text-primary{
@@ -139,14 +138,29 @@ button{
     font-family: $font-family !important;
 }
 
+// borders
+.border{
+    border-top: 1px solid $reserve !important;
+}
 
-// modal
+.border-right{
+    border-right: 1px solid $reserve !important;
+}
+
+.border-left{
+    border-left: 1px solid $reserve !important;
+}
+
+.border-bottom{
+    border-bottom: 1px solid $reserve !important;
+}
+
 .modal{
     background-color: rgba(0,0,0,0.4);
 
     .modal-content{
         box-shadow: $shadow-sm;
         border: $border !important;
-        border-radius: 20px;
+        border-radius: 10px;
     }
 }
